@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 	
 	<!-- Meta -->	
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Denis Fernandez Gridchin - front-end designer &amp; developer</title>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Denis Fernandez Gridchin | front-end designer &amp; developer</title>    
     <meta name="description" content="Personal website of Denis Fernandez Gridchin, front-end designer &amp; developer." />    	
     <meta name="author" content="Denis Fernandez Gridchin" />
     <meta name="keywords" content="frontend, front-end, front end, frontend developer, frontend developer Barcelona, frontend developer Spain, Mariscal, Elisava, Denis Fernandez Gridchin" />
-    <meta property="og:title" content="Denis Fernandez Gridchin">
-    <meta property="og:type" content="website"> 
-    <meta property="og:url" content="http://gridchin.com/">
-    <meta property="og:image" content="http://www.gridchin.com/tile.gif">
-    <meta property="og:description" content="Personal website of Denis Fernandez Gridchin, front-end designer &amp; developer.">    
-    
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta property="og:title" content="Denis Fernandez Gridchin" />
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="http://gridchin.com/" />
+    <meta property="og:image" content="http://www.gridchin.com/images/tile.gif" />
+    <meta property="og:description" content="Personal website of Denis Fernandez Gridchin, front-end designer &amp; developer." />
+    <meta name="google-site-verification" content="aKvxZjsxzEuUO8cobK1mBEO9uEEEw5wTKikz38riVoA" /> 
      
     <!-- Stylesheet -->    
-    <link rel="stylesheet" href="css/style.css" media="all" />
+    <link rel="stylesheet" href="css/style.css" />
 	
-	<!-- Media Queries / LESS -->
-	<link rel="stylesheet" href="css/8col.css" media="only screen and (min-width: 768px) and (max-width: 1024px)" />
-    <link rel="stylesheet" href="css/3col.css" media="only screen and (max-width: 767px)" />
-    <link rel="stylesheet" href="css/5col.css" media="only screen and (min-width: 480px) and (max-width: 767px)" />
-      
 	<!-- Smartphone stuff -->
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0; user-scalable=no"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0; user-scalable=no" />
       
 	<!-- Favicons, 16x16 -->
     <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon" />
@@ -44,21 +33,28 @@
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-	<script src="js/modernizr.js"></script>
-	<script src="js/scrollto.js"></script>
-	<script src="js/script.js"></script>
-	      
+	<script src="js/logo/logo.js"></script>
+    <script src="js/logo/logo.util.min.js"></script>
+    <script src="js/logo/logo.input.move.js"></script>
+    <script src="js/logo/logo.input.press.js"></script>
+	
+	<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
 </head>
   
 <body>
 	
 	<!--[if lt IE 7]>
-		<p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-	<![endif]-->	
+		<p class=ie>Your browser is <em>outdated!</em> <a href="http://browsehappy.com/">Please upgrade to a different browser</a> to experience this site.</p>
+	<![endif]-->
 		
     <header id="logo">
+		<canvas id="logo-canvas"></canvas> 
+		<canvas id="shadow-canvas"></canvas> 
+		<script type="text/javascript" src="js/logo/logo.initialize.js"></script>
     	<h1>Denis Fernandez Gridchin</h1>
-    	<span>g</span>
     </header>
       
     <div id="content" role="main">
@@ -72,10 +68,10 @@
             <article>
             	<h1>Hi!</h1>
             	<p>My name is Denis. I'm a minimalist front-end designer &amp; developer. <br />I make usable, simple and beautiful websites. I also enjoy coding designs to make them alive.</p>
-            	<p>I live in Barcelona with my <a href="http://gridchin.com/experiments/muah/" target="_blank">beautiful wife</a>, and work at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a>. <br />I'm Cuban and speak Spanish, English and Russian. I also love playing my bass guitar.</p>  
+            	<p>I live in Barcelona and <span class="fun">work</span> have fun at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a> if you wish. <br />I'm Cuban and speak Spanish, English and Russian. I also love playing my bass guitar.</p>  
             </article>
           
-            <article>
+            <article id="mentions">
 	            <h1>Mentions</h1>
     	        <ul>
 					<li>
@@ -90,9 +86,6 @@
 	              	<li>
 	              		<a href="http://designwoop.com/2012/01/30-inspiring-examples-of-big-typography-in-web-design/" target="_blank">30 Inspiring Examples of Big Typography in Web Design</a>
 	              	</li>
-    	          	<li>
-    	          		<a href="http://www.uxde.net/2011/11/12/clean-minimalist-web-designs-best-of/" target="_blank">Best of Minimalist Web Designs</a>
-    	          	</li>
         	      	<li>
         	      		<a href="http://www.webdesignerdepot.com/2011/09/the-ultimate-responsive-web-design-roundup/" target="_blank">Responsive Web Design Roundup</a>
         	      	</li>
@@ -146,49 +139,35 @@
             		<li>CSS3 Animations & Transitions</li>
             		<li>Usability &amp; accessibility</li>
             		<li>Social networking development</li>
-            		<li>Content management</li>
+            		<li>Creative Problem Solving</li>
+            		<li>Cross-browser Compatibility</li>
             		<li>SEO &amp; SEM</li>
             	</ul>
           	</article>
           
           	<article class="work">
                 <h1>Portfolio</h1>
-                <ul>
+                <ul>                    
                     <li>
-                    	<a href="http://www.mariscal.com/" target="_blank">Estudio Mariscal</a>
+                    	<a href="http://howdoyoumatchup.com/" target="_blank">Samsung Galaxy NotePRO</a>
                     </li>
                     <li>
-                    	<a href="http://chicoandrita.com/home.html" target="_blank">Chico &amp; Rita</a>
-                    </li>
-                    <li>
-                    	<a href="http://www.elisava.gridchin.com/" target="_blank">ELISAVA</a>
+                    	<a href="http://www.energyrealities.org/chapter/the-right-balance/item/your-energy-mix/erp6BBBA2042FBF4F850" target="_blank">Energy innovation by Statoil</a>
                     </li>
                     <li>
                     	<a href="http://linkedin.friend2friend.com/" target="_blank">LinkedIn Engagement Showcase</a>
+                    </li>                
+                    <li>
+                    	<a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>
                     </li>
                     <li>
-                    	<a href="http://www.nametaganalyzer.com/" target="_blank">LinkedIn app for Microsoft</a>
-                    </li>
-                    <li>
-                    	<a href="http://doubletree-site.w1.friend2friend.com/" target="_blank">LinkedIn app for DoubleTree</a>
-                    </li>
-                    <li>
-                    	<a href="http://les-miserables-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - Les Mis&eacute;rables</a>
-                    </li>                    
-                    <li>
-                    	<a href="http://www.facebook.com/DespicableMe/app_379757252052054" target="_blank">Universal Pictures - Despicable Me</a>
-                    </li>
-                    <li>
-                    	<a href="http://universal-thisis40-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - This Is 40</a>
+                    	<a href="http://doubletree.w1.friend2friend.com/" target="_blank">Hilton DoubleTree</a>
                     </li>
                     <li>
                     	<a href="http://www.lalalatoys.com/" target="_blank">lalalatoys</a>
                     </li>
                     <li>
                     	<a href="http://www.soyhugo.com/" target="_blank">Soy Hugo</a>
-                    </li>
-                    <li>
-                    	<a href="http://www.buscarte.cult.cu/" target="_blank">buscARTE</a>
                     </li>
                     <li>
                     	<a href="http://queridisimosintelectuales.com/" target="_blank">Queridisimos Intelectuales</a>
@@ -203,44 +182,83 @@
                     	<a href="http://www.gridchin.com/old/" target="_blank">Gridchin</a>
                     </li>
                     <li>
-                    	<a href="https://www.facebook.com/outsidemagazine?sk=app_414906338552749" target="_blank">So there I was</a>
+                    	<a href="http://newbelgium-map-facebook.w1.friend2friend.com/" target="_blank">New Belgium</a>
+                    </li>                 
+                    <li>
+                    	<a href="http://www.spongebobfanclub.com/" target="_blank">Nickelodeon - SpongeBob Fan Club</a>
+                    </li>
+                    <!--<li>
+                    	<a href="http://www.mariscal.com/" target="_blank">Estudio Mariscal</a>
                     </li>
                     <li>
-                    	<a href="https://www.facebook.com/newbelgium/app_203314013038634" target="_blank">New Belgium Radio</a>
+                    	<a href="http://chicoandrita.com/home.html" target="_blank">Chico &amp; Rita</a>
                     </li>
                     <li>
-                    	<a href="http://newbelgium-map-facebook.w1.friend2friend.com/" target="_blank">New Belgium Map</a>
+                    	<a href="http://www.elisava.gridchin.com/" target="_blank">ELISAVA</a>
                     </li>
                     <li>
-                    	<a href="https://ikea-carta-facebook.w1.friend2friend.com/" target="_blank">IKEA Letter</a>
+                    	<a href="http://www.nametaganalyzer.com/" target="_blank">Microsoft - Nametag Analyzer</a>
                     </li>
                     <li>
-                    	<a href="https://ikea-video-facebook.w1.friend2friend.com/" target="_blank">IKEA Video</a>
+                    	<a href="http://intel-it-center.w1.friend2friend.com/" target="_blank">Intel - Personalized IT Center</a>
                     </li>
                     <li>
-                    	<a href="http://ikea-malaga-facebook.w1.friend2friend.com/" target="_blank">IKEA Sevilla</a>
+                    	<a href="http://les-miserables-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - Les Mis&eacute;rables</a>
+                    </li>                    
+                    <li>
+                    	<a href="http://despicable2-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - Despicable Me</a>
                     </li>
                     <li>
-                    	<a href="http://www.compartetueuphoria.com/" target="_blank">Calvin Klein Euphoria</a>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/this-is-40-social-gallery-fusion/" target="_blank">Universal Pictures - This Is 40</a>
                     </li>
                     <li>
-                    	<a href="http://cayman-islands2-facebook.w1.friend2friend.com/" target="_blank">The Cayman Islands</a>
+                    	<a href="http://jny.w1.friend2friend.com/" target="_blank">Jones New York - Style Consultant</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.buscarte.cult.cu/" target="_blank">buscARTE</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/best-town-ever-2013-social-voting-contest-app/" target="_blank">Outside Magazine - Best Town Ever 2013</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/so-there-i-was-social-storytelling-app/" target="_blank">Outside Magazine - So There I Was</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/gear-wist-list-app/" target="_blank">Outside Magazine - Gear Wish List</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/pandora-radio-station-on-facebook-app/" target="_blank">New Belgium - Pandora Radio Station</a>
+                    </li>
+                    <li>
+                    	<a href="http://newbelgium-tourdefat-facebook.w1.friend2friend.com/" target="_blank">New Belgium - Tour de Fat</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/enjoy-the-ride-social-gallery-sweepstakes-and-contest-app/" target="_blank">New Belgium - Enjoy The Ride</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/ikea-spain-social-photos-videos-sharing-app/" target="_blank">IKEA Spain Social Photos & Videos</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/ikea-malaga-social-voting-app/" target="_blank">IKEA Málaga Social Voting</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.friend2friend.com/client/calvin-klein/" target="_blank">Calvin Klein Euphoria</a>
                     </li>
                     <li>
                     	<a href="http://outside-btowns2013-facebook.w1.friend2friend.com/" target="_blank">Outside Best Towns 2013</a>
                     </li>
                     <li>
+                    	<a href="http://cayman-islands2-facebook.w1.friend2friend.com/" target="_blank">The Cayman Islands</a>
+                    </li>
+                    <li>
                     	<a href="http://harpoon-ipa20-facebook.w1.friend2friend.com/" target="_blank">Harpoon IPA 20</a>
-                    </li>                 
-                    <li>
-                    	<a href="http://www.spongebobfanclub.com/" target="_blank">SpongeBob Fan Club</a>
                     </li>
                     <li>
-                    	<a href="http://nick-30-days-facebook.w1.friend2friend.com/" target="_blank">30 Days of Spongebob</a>
+                    	<a href="http://www.friend2friend.com/campaign-showcase/30-days-of-spongebob-daily-sweepstakes/" target="_blank">Nickelodeon - 30 Days of Spongebob</a>
                     </li>
                     <li>
-                    	<a href="http://kca.w5.friend2friend.com/" target="_blank">Kids Choice Awards 2013</a>
-                    </li>
+                    	<a href="http://kca.w5.friend2friend.com/" target="_blank">Nickelodeon - Kids Choice Awards 2013</a>
+                    </li>-->
                 </ul>
             </article>
               
@@ -248,13 +266,25 @@
                 <h1>Experiments</h1>
                 <ul>
                 	<li>
-                		<a href="http://gridchin.com/experiments/feelings/" target="_blank">Feelings</a>
+                    	<a href="http://gridchin.com/experiments/two-timer/" target="_blank">Two Timer</a>
+                    </li>
+                	<li>
+                    	<a href="http://gridchin.com/experiments/moon-phases/" target="_blank">Moon Phases</a>
+                    </li>
+                	<li>
+                		<a href="http://gridchin.com/experiments/time-eclipse/" target="_blank">Time Eclipse</a>
+                	</li>
+                	<li>
+                		<a href="http://gridchin.com/2014/" target="_blank">2014</a>
                 	</li>
                 	<li>
                 		<a href="http://gridchin.com/2013/" target="_blank">2013</a>
                 	</li>
+                	<li>
+                		<a href="http://gridchin.com/2012/" target="_blank">2012</a>
+                	</li>
                     <li>
-                    	<a href="http://gridchin.com/experiments/euro/" target="_blank">Euro</a>
+                    	<a href="http://gridchin.com/experiments/euro/" target="_blank">EU</a>
                     </li>
                     <li>
                     	<a href="http://gridchin.com/experiments/map/" target="_blank">Let's play some chess</a>
@@ -265,15 +295,12 @@
                     <li>
                     	<a href="http://gridchin.com/experiments/flipping2/" target="_blank">Flipping 2</a>
                     </li>
-                    <li>
-                    	<a href="http://gridchin.com/experiments/shoot/" target="_blank">Shoot the squire</a>
-                    </li>
-                    <li>
+                    <!--<li>
                     	<a href="http://gridchin.com/experiments/random/" target="_blank">Random</a>
-                    </li>
+                    </li>-->
                     <li>
-                    	<a href="http://gridchin.com/experiments/random2/" target="_blank">Random 2</a>
-                    </li>
+                		<a href="http://gridchin.com/experiments/feelings/" target="_blank">Feelings</a>
+                	</li>
                     <li>
                     	<a href="http://wwwwwwwww.gridchin.com/" target="_blank">9w</a>
                     </li>
@@ -312,7 +339,7 @@
                     	<a href="http://www.facebook.com/gridchin" target="_blank">facebook</a>
                     </li>
                     <li>
-                    	<a href="http://www.myspace.com/gridchin" target="_blank">myspace</a>
+                    	<a href="https://github.com/gridchin" target="_blank">github</a>
                     </li>
                     <li>
                     	<a href="http://dribbble.com/gridchin" target="_blank">dribbble</a>
@@ -336,20 +363,17 @@
                     	<a href="http://www.mariscal.com/" target="_blank">Javier Mariscal</a>
                     </li>
                     <li>
-                    	<a href="http://www.landermuruaga.com/" target="_blank">Lander Muruaga</a>
+                    	<a href="https://twitter.com/dicepb/" target="_blank">Jorge Batista</a>
                     </li>
-                    <li>
+                    <!--<li>
                     	<a href="http://www.eleonoramajorana.com/" target="_blank">Eleonora Majorana</a>
                     </li>
                     <li>
-                    	<a href="http://www.renatarodrigues.com/" target="_blank">Renata Rodrigues</a>
-                    </li>
-                    <li>
-                    	<a href="http://dicepb.wordpress.com/" target="_blank">Jorge Batista</a>
+                    	<a href="http://www.landermuruaga.com/" target="_blank">Lander Muruaga</a>
                     </li>
                     <li>
                     	<a href="http://www.luciawalter.com/" target="_blank">Luc&iacute;a Walter</a>
-                    </li>
+                    </li>-->
                 </ul>
             </article>
 
@@ -359,36 +383,23 @@
     
     <footer></footer>
 
-    <!-- Typekit fonts load -->
-    <p class="fonts">&nbsp;<span>&nbsp;</span></p>  
+    <!-- loading -->
+    <div class="loading"></div>  
     		
 	<!-- Google Analytics -->
-    <meta name="verify-v1" content="XrXZJyPaLNYkrdocjQ4KfcxsazxX4ZeLoNWWdpGOuxs=" />
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-10248995-1");
-    pageTracker._trackPageview();
-    } catch(err) {}
-    </script> 	
-    
-    <!-- Begin W3Counter Tracking Code -->
-    <div class="w3counter">
-		<script type="text/javascript" src="http://www.w3counter.com/tracker.js"></script>
-		<script type="text/javascript">
-		w3counter(62534);
-		</script>
-		<noscript>
-		<div>
-			<a href="http://www.w3counter.com">
-				<img src="http://www.w3counter.com/tracker.php?id=62534" alt="W3Counter" />
-			</a>
-		</div>
-		</noscript>
-	</div>		
+  	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-10248995-1', 'gridchin.com');
+	  ga('send', 'pageview');
+	</script>
+  	
+  	<!-- Scripts -->	
+	<script src="js/scrollto.js"></script>
+	<script src="js/script.js"></script>		
 	    
 </body>
 </html>
