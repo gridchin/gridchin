@@ -1,0 +1,53 @@
+/*	
+
+	Less+ by Jimmy Rosén, http://www.angrycreative.se/projekt/less-framework
+	Based on Less Framework 4 by Joni Korpi, http://lessframework.com
+	
+*/
+
+/*	Typography presets
+	------------------	*/
+
+.huge, h1 {
+    font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2",Georgia,serif;
+	font-size: 195px;
+	line-height:.84em;
+	font-weight:normal;
+	text-transform:lowercase;
+	margin:30px 0 0;
+}
+
+h1 em {
+    font-family: Baskerville,Georgia,serif;
+}
+
+.large, h2 {
+	font-size: 14px;
+	letter-spacing:.05em;
+	text-transform:uppercase;
+	padding:20px 0 17px 50px;
+	margin-bottom:0
+}
+
+.bigger, h3 {
+	font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2",Georgia,serif;
+	font-size: 35px;
+	font-weight:normal;
+	text-transform:lowercase;
+	margin-bottom:10px
+}
+
+.big, h4 {
+	font-size: 19px;
+}
+
+body {
+	font: 16px/1.6 "gesta-1","gesta-2",Verdana,sans-serif;
+	background: #fff;
+	color: #2d4350;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}

@@ -1,0 +1,238 @@
+/*	
+
+	Less+ by Jimmy Rosén, http://www.angrycreative.se/projekt/less-framework
+	Based on Less Framework 4 by Joni Korpi, http://lessframework.com
+	
+*/
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+body {
+	width: 252px;
+	padding-bottom:50px
+}
+
+
+
+.half{
+	width:252px;
+}
+
+.third{
+	width:252px;
+	float:left;
+	margin-right:24px
+}
+
+.fourth{
+	width:252px;
+	float:left;
+	margin-right:0
+}
+
+.h2_cont{
+    width:252px;
+	overflow:hidden
+}
+
+h2{
+	padding:45px 0 0;
+	margin:10px 0 5px;
+	text-align:center;
+	background-position:50% 0 !important
+}
+	
+section{
+	padding-right:0;
+    width: 252px;
+	overflow:hidden
+}
+
+
+/* Header
+-------------------------------------------------------------------------------*/
+
+header{
+	margin-top:30px;
+    width: 252px;
+	padding-right:0
+}
+
+header h1{
+	font-size: 78px !important;
+	width:252px;
+	float:left;
+	text-align:center
+}
+
+header h1 small{
+	margin:30px 0 10px;
+	line-height:1em
+}
+
+header #say_hello{
+	margin-bottom:10px
+}
+
+header #hello{
+	padding-top:90px;
+	margin-right:50px
+}
+
+header #hello{
+	background-position: 50% 30px;
+}
+
+header #hello a{
+	line-height:2.25em
+}
+
+header #hello{
+	width:252px;
+	float:left
+}
+
+header #hello p{
+	position:absolute;
+	top:194px;
+	right:50px;
+}
+
+
+/* Bio
+-------------------------------------------------------------------------------*/
+
+#bio p{
+	width:252px;
+	margin-bottom:20px;
+	text-align:center
+}
+
+#bio p.hi{
+	margin-left:0	
+}
+
+
+/* Services
+-------------------------------------------------------------------------------*/
+
+#services ul{
+	text-align:center;
+	width:252px;
+	list-style-type:none
+}
+#services h3{
+	text-align:center;
+	width:252px;
+	padding-left:0
+}
+#services ul li{
+	margin-left:0	
+}
+
+
+/* Work
+-------------------------------------------------------------------------------*/
+
+#work article{
+	width:252px;
+	height:auto;
+	background:none;
+	text-align:center;
+	margin-bottom:30px
+}
+#work article img{
+	width:252px;
+}
+#work article h3, #work article p{
+	margin-bottom:0;
+	padding-bottom:0
+}
+#work article:hover img, #work article h3, #work article p{
+	opacity:1
+}
+#work article article{
+	position:relative;
+	width:252px;
+	overflow:hidden;
+	opacity:1
+}
+#work article article h3 a, #work article article p{
+	color:#2d4350
+}
+#work article article p a:hover{
+	color:#2d4350
+}
+
+
+/* Contact
+-------------------------------------------------------------------------------*/
+
+#contact{
+	text-align:center
+}
+
+
+/* Footer
+-------------------------------------------------------------------------------*/
+
+footer{
+    width: 252px;
+	height:252px;
+	padding-right:0;
+}
+
+
+/* Social
+-------------------------------------------------------------------------------*/
+
+#social{
+	width:252px;
+	height:120px;
+	margin:20px auto 0;
+	text-align:center;
+	padding-right:0
+}
+#twitter{
+	display:block;
+	height:30px;
+	width:252px;
+	float:left;
+	overflow:hidden;
+	margin-bottom:15px
+}
+#google{
+	display:block;
+	height:30px;
+	width:252px;
+	float:left;
+	overflow:hidden;
+	margin-bottom:15px
+}
+#fbk{
+	float:left;
+	display:block;
+	height:30px;
+	width:252px;
+	overflow:hidden
+}
+iframe.fb_ltr{
+	vertical-align:top !important
+}
+#___plusone_0{
+	margin:0 auto !important;
+	float:none !important
+}
+
+
+/*Typekit
+-------------------------------------------------------------------------------*/
+
+.typekit-badge{
+	display:none !important
+}

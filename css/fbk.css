@@ -1,0 +1,22 @@
+#fbk header, #fbk h1{
+	margin-top:2px
+}
+#fbk h1 a{
+	color:#2d4350;
+}
+#fbk h1 a:hover{
+	border-bottom:none
+}
+#fbk h1 a small{
+	-webkit-transition: all 0.5s ease-in-out; 
+	-moz-transition: all 0.5s ease-in-out; 
+	-o-transition: all 0.5s ease-in-out; 
+	transition: all 0.5s ease-in-out
+}
+#fbk h1 a:hover small{
+	color:#08c
+}
+#fbk #bio h3{
+	text-align:center;
+	width:436px
+}
