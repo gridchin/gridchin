@@ -1,331 +1,283 @@
-/*	
+/*	Resets
+	------	*/
 
-	Less+ by Jimmy Rosén, http://www.angrycreative.se/projekt/less-framework
-	Based on Less Framework 4 by Joni Korpi, http://lessframework.com
-	
-*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 
-/*  
-	THIS DOCUMENT IS FOR GLOBAL DEFINITIONS ONLY.
-	NO HEIGHTS, WIDTHS, PADDINGS OR MARGINS THAT WON'T BE APPLICABLE FOR ALL SCREEN RESOLUTIONS.
-*/
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+}
+
+p,
+dl,
+hr,
+h1,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+	margin-bottom: 22px;
+}
+
+::selection,
+::-moz-selection,
+img::selection,
+img::-moz-selection {
+	background: transparent;
+}
+
+
+
+/*	Global
+	------	*/
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
 
 body {
-	margin: 0 auto;
-	/* Prevents Mobile Safari from bumping up font sizes in landscape */
+	font: 14px/1.6 "gesta-1","gesta-2",Verdana,sans-serif;
+	color: #333;
+	background-color: #fff;
 	-webkit-text-size-adjust: 100%; 
 	-webkit-tap-highlight-color: rgb(255,255,0);
 }
-
-::selection 	 	{background: rgb(255,255,0);}
-::-moz-selection 	{background: rgb(255,255,0);}
-img::selection 		{background: transparent;}
-img::-moz-selection {background: transparent;}
-
-a {
-	text-decoration:none;
-	color:#08c;
+  
+a,
+a img {
+	color: #999;
+	outline: none;
+	text-decoration: none;
 	-webkit-transition: all 0.5s ease-in-out; 
 	-moz-transition: all 0.5s ease-in-out; 
 	-o-transition: all 0.5s ease-in-out; 
 	transition: all 0.5s ease-in-out	
 }
+ 
+a:hover {
+	color: #333;
+}
+   
+a img, 
+a:hover img {
+	border: 0;
+	outline: none;
+}
+  
+h1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+  
+  
+    
+/*	Layout
+	------	*/
 
-a img{
+#content {
+	padding-bottom: 400px;
+}
+	
+#logo {
+	position: fixed;
+	z-index: 999;
+	margin: 80px 0 75px;
+	padding: 40px 26px;
+	text-align: right;
+	width: 75px;
+	top: 0;
+	left: 40px;
+	color: #333;
+}
+
+#logo span {
+	font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2",Georgia,serif;
+	font-size: 170px;
+	line-height: 1em;
+	position: fixed;
+	top: 30px;
+	left: 60px;
+	padding: 0 20px;
+	z-index: 1000;
+	background-color: #fff;
 	-webkit-transition: all 0.5s ease-in-out; 
 	-moz-transition: all 0.5s ease-in-out; 
 	-o-transition: all 0.5s ease-in-out; 
 	transition: all 0.5s ease-in-out;
 }
 
-a:hover {
-	color:#2d4350;
-	border-bottom:dashed 1px #08c
-}
-
-
-/* Content
--------------------------------------------------------------------------------*/
-
-.h2_cont{
-	border-top:2px solid #2d4350;
-	border-bottom:1px solid #e0e0e0;
-	margin:50px 0 30px;
-	overflow:hidden;
-	background-color:#fff
-}
-
-
-/*** Header 
--------------------------------------------------------------------------------*/
-
-header{
-	border-bottom:1px solid #e0e0e0;
-	padding-bottom:0;
-	margin:0 auto 20px;
-	overflow:hidden
-}
-header h1 small{
-	font-size:38.5px;
-	display:block;
-	line-height:.5em;
-	float:right
-}
-header #hello{
-	font-size:20px;
-	color:#ccc;
-	text-align:center;
-	background:transparent url('../files/hello.png') no-repeat 50% 55px;
-	height:130px;
-	padding-top:117px;
-	-webkit-transition: all 1.2s ease-in-out; 
-	-moz-transition: all 1.2s ease-in-out; 
-	-o-transition: all 1.2s ease-in-out; 
-	transition: all 1.2s ease-in-out
-}
-header #hello a{
-	font-weight:normal;
-	font-size:16px;
-	line-height:1.8em;
-	color:#fff;
-	display:block;
-	border:none;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
-	-o-transition: all 0.5s ease-in-out; 
-	transition: all 0.5s ease-in-out
-}
-header #hello a:hover{
-	color:#009adf;
-}
-
-
-/*** Bio 
--------------------------------------------------------------------------------*/
-
-#bio p{
-	margin-bottom:0;
-}
-
-
-/*** Services 
--------------------------------------------------------------------------------*/
-
-#services h3{
-	font-family:"gesta-1","gesta-2",Verdana,sans-serif;
-	font-size: 14px;
-	font-weight:bold;
-	letter-spacing:.05em;
-	text-transform:uppercase;
-	padding:20px 0 20px 16px; /* padding:20px 0 20px 45px; */
-	margin-bottom:0
-}
-#services h3 span{
-    font: normal 40px Georgia,serif;
-	color:#ccc;
-	width:32px;
-	text-align:right;
-	display:inline-block
-}
-#services ul li{
-	margin-left:54px	
-}
-
-
-/*** Portfolio 
--------------------------------------------------------------------------------*/
-
-
-#work section{
-	border-bottom:1px solid #e0e0e0;
-}
-#work .h2_cont{
-	margin-bottom:50px
-}
-#work h2{
-	background:#fff url('../files/portfolio.jpg') no-repeat 0 10px
-}
-#work article{
-	position:relative;
-	background-color:#2D4350;
-	height:282px;
-	margin-bottom:24px;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
-	-o-transition: all 0.5s ease-in-out; 
-	transition: all 0.5s ease-in-out
-}
-#work article article{
-	background-color:transparent;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:999
-}
-#work article h3, #work article p, #work article img{
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
-	-o-transition: all 0.5s ease-in-out; 
-	transition: all 0.5s ease-in-out
-}
-#work article h3, #work article p{
+#logo:hover span {
 	opacity:0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 hack */
-	filter: alpha(opacity = 0); /* IE 5-7 hack */
-	padding-left:10px;
-	z-index:0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
 }
-#work article a{
-	color:#009adf;
+
+section {
+    padding: 0 0 150px 0;
+    position: relative;
+    display: block;
+    margin-left: 200px
 }
-#work article a:hover{
-	border:none
+  
+	section header {
+		float: left;
+		margin: 0 0 0 -175px;
+		text-align: right;
+		width: 116px;
+	}  
+
+		section header a {
+			color: #999;
+			outline: none;
+		}    
+		
+article {
+    width: 200px;
+    min-height: 200px;
+    float: left;
+    margin-right: 25px;  
 }
-#work article h3{
-	line-height:1.2em;
-	margin-top:10px;
-	margin-bottom:10px
+  
+	article.top {
+		padding-top: 22px;  
+	}
+	
+
+
+/*	Active
+	------	*/
+	
+#about header {
+	position: fixed;
+    top: 250px;
+    left: 25px;
+    margin-left: 0;
 }
-#work article h3 a{
-	color:#fff;
+
+#work .active {
+	position: fixed;
+    top: 280px;
+    left: 25px;
+    margin-left: 0;
 }
-#work article p{
-	color:#ccc;
-	padding:10px;
-	margin-bottom:0
-}
-#work article p a:hover{
-	border-bottom:dashed 1px #08c
-}
-#work article:hover h3, #work article:hover p{
-	opacity:1;
-	z-index:10;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* IE 8 hack */
-	filter: alpha(opacity = 100); /* IE 5-7 hack */
-}
-#work article:hover img{
-	opacity:.1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"; /* IE 8 hack */
-	filter: alpha(opacity = 10); /* IE 5-7 hack */
-}
-#work article a:hover{
-	color:#fff
-}
-#work article h3 a:hover{
-	border:none;
-	color:#009adf
+
+#connect .active {
+	position: fixed;
+    top: 310px;
+    left: 25px;
+    margin-left: 0;
+}	
+
+
+
+/*	Details
+	-------	*/
+	
+section#about {
+	margin-top: 250px
+}	
+
+.phone {
+	margin-top: 22px
 }
 
 
-/*** Services 
--------------------------------------------------------------------------------*/
-
-#services h2{
-	background:transparent url('../files/services.jpg') no-repeat 0 10px
-}
-
-/*** Clients 
--------------------------------------------------------------------------------*/
-
-#clients h2{
-	background:transparent url('../files/clients.jpg') no-repeat 0 10px
-}
-#clients a img{
-	margin-top:15px	
-}
-#clients a:hover img{
-	opacity:.8;
-}
-#clients a:hover{
-	border:none
+  
+/*	Footer
+	------	*/
+  
+footer {  
+	pointer-events: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+	z-index: 9999;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 86%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(86%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 
-/*** Contact 
--------------------------------------------------------------------------------*/
 
-#contact{
-	padding-bottom:30px
+/*	Fonts render
+	------------	*/
+
+.fonts {
+	font-family: "gesta-1","gesta-2";
+	position: fixed;
+	left: -9999px;
 }
-#contact h2{
-	background:transparent url('../files/contact.jpg') no-repeat 0 10px
-}
-#contact h3{
-	font-family:"gesta-1","gesta-2",Verdana,sans-serif;
-	font-size: 14px;
-	font-weight:bold;
-	letter-spacing:.05em;
-	text-transform:uppercase;
-	padding:20px 0;
-	margin-bottom:0
-}
-#contact h3#phone{
-	margin-top:15px
-}
-#contact ul li{
-	list-style-type:none;
-	margin-left:0
+
+.fonts span {
+	font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2";
 }
 
 
-/*** Footer 
--------------------------------------------------------------------------------*/
 
-footer{
-	border-top:1px solid #e0e0e0;
-	text-align:center;
-	height:150px;
-	padding-top:30px;
-	overflow:hidden
+/*	Clear
+	-----	*/
+
+section:after { 
+	content: " "; 
+	display: block; 
+	clear: both; 
+	visibility: hidden; 
+	line-height: 0; 
+	height: 0;
+	margin-bottom: 0; 
 }
-footer a img{
-	opacity:.4;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; /* IE 8 hack */
-	filter: alpha(opacity = 40); /* IE 5-7 hack */
-}
-footer a:hover{
-	border:none
-}
-footer a:hover img{
-	opacity:.9;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /* IE 8 hack */
-	filter: alpha(opacity = 90); /* IE 5-7 hack */
+
+* html section { 
+	height: 1%; 
 }
 
 
-/* Social
--------------------------------------------------------------------------------*/
 
-#social{
-	width:300px;
-	height:30px;
-	margin:0 auto;
-	padding-right:0
+/*	W3Counter
+	---------	*/
+
+.w3counter {
+	border: 0; 
+	position: fixed; 
+	top: -9999em
 }
-#twitter{
-	display:block;
-	height:30px;
-	width:128px;
-	float:left;
-	overflow:hidden
+
+
+
+/*	Typekit
+	-------	*/
+
+#typekit-badge-hku8tyb {
+	display: none !important
 }
-#google{
-	display:block;
-	height:30px;
-	width:80px;
-	float:left;
-	overflow:hidden
-}
-#fbk{
-	float:right;
-	display:block;
-	height:30px;
-	width:90px;
-	overflow:hidden
-}
-iframe.fb_ltr{
-	vertical-align:top !important
-}
-#___plusone_0{
-	float:left !important;
-}
+
+
+
+/* Happy end */

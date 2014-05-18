@@ -1,144 +1,78 @@
-/*	
+body {
+	width: 712px;
+	min-width: 712px;
+	padding: 48px 28px 200px;
+}
 
-	Less+ by Jimmy Rosén, http://www.angrycreative.se/projekt/less-framework
-	Based on Less Framework 4 by Joni Korpi, http://lessframework.com
-	
-*/
+h1,
+p,
+li,
+header a {
+	color: #333;
+}
 
-/*	Default 8-column layout
-	60 px columns, 24 px gutters, 60 px margins, 768 px total
-	---------------------------------------------------------
-	1     2      3      4      5      6      7      8     
-	60px  144px  228px  312px  396px  480px  564px  648px	*/
+a {
+	color: #999;
+}
 
+#logo {
+	position: relative;
+	margin: 150px 0 25px;
+	padding: 40px 0;
+	text-align: left;
+	width: 650px;
+	left: 0;
+}
 
-body{
-    width: 736px
+#logo h1 {
+	display: none !important;
+}
+
+#logo span {
+	position: relative;
+	left: -10px;
+}
+
+#logo:hover span {
+	opacity:1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity = 100);
+}
+
+section {
+	width: 220px;
+	float: left;
+	margin: 100px 0 0 15px;
 }
 	
-.half{
-	width:344px;
-	float:left;
-	margin-right:24px
-}
+	section#about {
+    	margin-top: 100px;
+	}
 
-.third{
-	width:221px;
-	float:left;
-	margin-right:24px
-}
-
-.fourth{
-	width:160px;
-	float:left;
-	margin-right:24px
-}
-
-.h2_cont{
-    width:712px;
-	overflow:hidden
-}
+	section header {
+		margin: 0 0 30px;
+		position: relative;
+		text-align: left;
+	}
 	
-section{
-	padding-right: 24px;
-    width: 736px;
-	overflow:hidden
+		section header a{
+			cursor: default;
+		}
+
+article {
+	min-height: inherit;
+	margin-bottom: 20px;
 }
 
-
-/* Header
--------------------------------------------------------------------------------*/
-
-header{
-	margin-top:30px;
-	margin-right: 24px;
-    width: 712px
+#about header,
+#work .active,
+#connect .active {
+	position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 0;
 }
 
-header h1{
-	font-size: 137px !important;
-	width:436px;
-	float:left
-}
-
-header #hello{
-	padding-top:90px;
-	margin-right:50px
-}
-
-header #hello{
-	background-position: 50% 30px;
-}
-
-header #hello a{
-	line-height:2.25em
-}
-
-header #hello{
-	width:160px;
-	float:right
-}
-
-header #hello p{
-	position:absolute;
-	top:194px;
-	right:50px;
-}
-
-
-/* Bio
--------------------------------------------------------------------------------*/
-
-#bio p{
-	width:344px
-}
-
-#bio p.hi{
-	margin-left:0	
-}
-
-
-/* Work
--------------------------------------------------------------------------------*/
-
-#work article{
-	width:712px;
-	height:230px;
-	background:none
-}
-#work article img{
-	width:221px;
-	margin-right:24px;
-	float:left
-}
-#work article:hover img, #work article h3, #work article p{
-	opacity:1
-}
-#work article article{
-	position:relative;
-	width:436px;
-	overflow:hidden;
-	opacity:1
-}
-#work article article h3 a, #work article article p{
-	color:#2d4350
-}
-#work article article p a:hover{
-	color:#2d4350
-}
-
-
-/* Footer
--------------------------------------------------------------------------------*/
-
-footer{
-    width: 712px;
-	padding-right:0;
-}
-
-/*Typekit
--------------------------------------------------------------------------------*/
-
-.typekit-badge{
-	display:none !important
+footer {  
+	left: 0;
 }

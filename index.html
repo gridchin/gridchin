@@ -1,299 +1,396 @@
-<!doctype html>
-<html lang="en">
-	
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-
-      <!-- Meta -->
-      <title>Denis Fernandez Gridchin</title>
-      <meta charset="utf-8" />
-
-      <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-      
-      <!-- Global Stylesheets -->
-      <link rel="stylesheet" href="css/reset.css" media="all" />
-      <link rel="stylesheet" href="css/fonts.css" media="all" />
-      <link rel="stylesheet" href="css/style.css" media="all" />
-      
-      <!-- Fallback if browser does not support media queries + javascript (Read: Internet Explorer 7 - 8) -->
-      <link rel="stylesheet" href="css/10col.css" media="all" />
-  
-      <!-- Media Queries / LESS -->
-      <link rel="stylesheet" href="css/10col.css" media="only screen and (min-width: 992px)" />
-      <link rel="stylesheet" href="css/8col.css" media="only screen and (min-width: 768px) and (max-width: 991px)" />
-      <link rel="stylesheet" href="css/3col.css" media="only screen and (max-width: 767px)" />
-      <link rel="stylesheet" href="css/5col.css" media="only screen and (min-width: 480px) and (max-width: 767px)" />
-
-      <!-- Smartphone stuff -->
-      <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0; user-scalable=no"/>
-      <!-- Add "maximum-scale=1.0, user-scalable=no" to fix the Mobile Safari auto-zoom bug on orientation changes, but keep in mind that it will disable user-zooming completely. Bad for accessibility. -->   
+	
+	<!-- Meta -->	
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Denis Fernandez Gridchin - front-end designer &amp; developer</title>    
+    <meta name="description" content="Personal website of Denis Fernandez Gridchin, front-end designer &amp; developer." />    	
+    <meta name="author" content="Denis Fernandez Gridchin" />
+    <meta name="keywords" content="frontend, front-end, front end, frontend developer, frontend developer Barcelona, frontend developer Spain, Mariscal, Elisava, Denis Fernandez Gridchin" />
+    <meta property="og:title" content="Denis Fernandez Gridchin">
+    <meta property="og:type" content="website"> 
+    <meta property="og:url" content="http://gridchin.com/">
+    <meta property="og:image" content="http://www.gridchin.com/tile.gif">
+    <meta property="og:description" content="Personal website of Denis Fernandez Gridchin, front-end designer &amp; developer.">    
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
      
-      <!-- Favicons, 16x16 -->
-      <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon" />
-      <link rel="icon" href="files/favicon.ico" type="image/x-icon" />
+    <!-- Stylesheet -->    
+    <link rel="stylesheet" href="css/style.css" media="all" />
+	
+	<!-- Media Queries / LESS -->
+	<link rel="stylesheet" href="css/8col.css" media="only screen and (min-width: 768px) and (max-width: 1024px)" />
+    <link rel="stylesheet" href="css/3col.css" media="only screen and (max-width: 767px)" />
+    <link rel="stylesheet" href="css/5col.css" media="only screen and (min-width: 480px) and (max-width: 767px)" />
       
-      <!-- Fancy Apple icons, 144x144 -->
-      <link rel="apple-touch-icon" sizes="114x114" href="assets/114-icon.png"/> 
+	<!-- Smartphone stuff -->
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0; user-scalable=no"/>
       
-      <!-- Fancy Apple 'fake webapp' support -->
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-      <link rel="apple-touch-startup-image" href="images/splash.png" />
-                   
-      <meta name="description" content="Personal website of Denis Fernandez Gridchin, graphic &amp; web designer." />
-      <meta name="keywords" content="graphic designer, web designer, Denis Fernández Gridchin, web design Barcelona, web design Spain" />
-                 
-      <!-- Jquery -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-     
-      <!-- Media Queries for IE --> 
-      <script src="js/jquery.mediaqueries1.19.js"></script>
-            
-      <!-- Scroll to top -->
-      <script src="js/scrolltopcontrol.js" type="text/javascript"></script>
-
-      <!-- Typekit -->
-      <script type="text/javascript" src="http://use.typekit.com/hku8tyb.js"></script>
-      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-      
-      <!-- Google+ -->
-      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-      
-      <!-- Google Analytics -->
-      <meta name="verify-v1" content="XrXZJyPaLNYkrdocjQ4KfcxsazxX4ZeLoNWWdpGOuxs=" />
-      <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-      try {
-      var pageTracker = _gat._getTracker("UA-10248995-1");
-      pageTracker._trackPageview();
-      } catch(err) {}
-      </script>
-
+	<!-- Favicons, 16x16 -->
+    <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon" />
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="http://use.typekit.com/hku8tyb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<!-- Scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/scrollto.js"></script>
+	<script src="js/script.js"></script>
+	      
 </head>
-
+  
 <body>
-
-	 <header id="top">
-         <h1>Gridchin <small>Graphic <em>&amp;</em> Web Designer</small></h1>
-         <div id="hello">
-         		<a href="mailto:denis@gridchin.com">denis@gridchin.com</a>
-            	<a href="tel:+34651721164">+34 651.721.164</a>
-         </div>
-     </header><!-- end #header -->
+	
+	<!--[if lt IE 7]>
+		<p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<![endif]-->	
+		
+    <header id="logo">
+    	<h1>Denis Fernandez Gridchin</h1>
+    	<span>g</span>
+    </header>
       
-      
-     <section id="bio">
-         <p class="hi third">Hi! My name is Denis Fernandez Gridchin and I'm a graphic &amp; web designer. I make usable and beautiful websites. I also enjoy coding designs to make them alive.</p>         
-         <p class="third">I live and work in Barcelona, at <a href="http://www.mariscal.com/" target="_blank">Estudio Mariscal</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a>. I'm Cuban and speak Spanish, English and Russian. I like playing my bass guitar.</p>
-     </section><!-- end #bio -->
-     
-     
-     <section id="services">
-     	 <div class="h2_cont">
-         	<h2>Services</h2>
-         </div>
-         
-         <div class="third">
-         	<h3><span>1.</span> Detect</h3>
-            <ul>
-                <li>Information Architecture</li>
-                <li>Wireframing and Prototyping</li>
-                <li>Usability &amp; Accessibility</li>
-             </ul>
-         </div>
-
-         <div class="third">
-         	<h3><span>2.</span> Design</h3>
-            <ul>
-            	<li>Interaction and Graphic Design</li>
-                <li>HTML &amp; CSS</li>
-                <li>Media Queries</li>
-             </ul>
-         </div>
-
-         <div class="third">
-         	<h3><span>3.</span> Develop</h3>
-            <ul>
-            	<li>Javascript Libraries</li>
-                <li>Content Management Systems</li>
-                <li>SEO and SEM</li>
-             </ul>
-         </div>
-
-     </section><!-- end #services -->
-     
-     
-     <section id="work">
-     	 <div class="h2_cont grid_12">
-         	<h2>Portfolio</h2>
-         </div>
+    <div id="content" role="main">
         
-         <article class="third">
-         	 <a href="http://www.elisava.gridchin.com/" target="_blank"><img src="img/elisava.jpg" alt="ELISAVA" /></a>
-             <article>
-                <h3><a href="http://www.elisava.gridchin.com/" target="_blank">ELISAVA</a></h3>
-                <p>Master thesis project for ELISAVA. My university's website redesign.</p>
-                <p><a href="http://www.elisava.gridchin.com/" target="_blank">http://www.elisava.gridchin.com/</a></p>
-             </article>        
-		 </article>
-         
-         <article class="third">
-         	 <a href="http://www.mariscal.com/" target="_blank"><img src="img/mariscal.jpg" alt="Estudio Mariscal" /></a>
-             <article>
-                <h3><a href="http://www.mariscal.com/" target="_blank">Estudio Mariscal</a></h3>
-                <p>Redesign of our company's website. Getting fun with my great friends <a href="http://www.mariale.net/" target="_blank">Jorge</a> and <a href="http://www.albagcorral.com/" target="_blank">Alba</a>.</p>
-                <p><a href="http://www.mariscal.com/" target="_blank">http://www.mariscal.com/</a></p>
-    		 </article>
-         </article>
-         
-         <article class="third">
-         	 <a href="http://www.buscarte.cult.cu/" target="_blank"><img src="img/buscarte.jpg" alt="Buscarte" /></a>		
-             <article>
-                <h3><a href="http://www.buscarte.cult.cu/" target="_blank">Buscarte</a></h3>
-                <p>Cuban Culture search engine [beta].</p>
-                <p><a href="http://www.buscarte.cult.cu/" target="_blank">http://www.buscarte.cult.cu/</a></p>
-             </article>
-		 </article>
-         
-         <article class="third">
-         	 <a href="http://www.camper.com/en/camper-for-kids/" target="_blank"><img src="img/camper.jpg" alt="Camper for Kids" /></a>
-             <article>
-                <h3><a href="http://www.camper.com/en/camper-for-kids/" target="_blank">Camper for Kids</a></h3>
-                <p>A huge project for a huge company.</p>
-                <p><a href="http://www.camper.com/en/camper-for-kids/" target="_blank">http://www.camper.com/</a></p>
-    		 </article>
-         </article>
-         
-         <article class="third">
-         	 <a href="http://chicoandrita.com/home.html" target="_blank"><img src="img/chicoyrita.jpg" alt="Chico &amp; Rita" /></a>
-             <article>
-                <h3><a href="http://chicoandrita.com/home.html" target="_blank">Chico &amp; Rita</a></h3>
-                <p>HTML, CSS &amp; JS development of the website for one of the most beautiful movies in the world, "Chico &amp; Rita". Working with my friends <a href="http://www.albagcorral.com/" target="_blank">Alba</a>, <a href="http://www.mariale.net/" target="_blank">Jorge</a> and <a href="http://plugnpub.free.fr/book/" target="_blank">Marie</a>.</p>
-                <p><a href="http://chicoandrita.com/home.html" target="_blank">http://chicoandrita.com/</a></p>
-             </article>
-		 </article>
-
-         <!-- <article class="third">
-         	 <a href="http://gridchin.com/directorio/" target="_blank"><img src="img/directorio.jpg" alt="Directorio Cultural" /></a>
-             <article>
-                <h3><a href="http://gridchin.com/directorio/" target="_blank">Directorio Cultural</a></h3>
-                <p>Proposed redesign of the web directory of Cuban cultural websites.</p>
-                <p><a href="http://gridchin.com/directorio/" target="_blank">http://gridchin.com/directorio/</a></p>
-             </article>
-		 </article>
-
-         <article class="third">
-         	 <a href="http://gridchin.com/cordoban/" target="_blank"><img src="img/cordoban.jpg" alt="Cordoban" /></a>			
-             <article>
-                <h3><a href="http://gridchin.com/cordoban/" target="_blank">Cordoban</a></h3>
-                <p>Masters thesis project for the European Institute of Design. Redesign of the identity and website of Cordoba, spanish leather goods company.</p>
-                <p><a href="http://gridchin.com/cordoban/" target="_blank">http://gridchin.com/cordoban/</a></p>
-             </article>
-		 </article> -->
-         
-         <article class="third">	
-         	 <a href="http://queridisimosintelectuales.com/" target="_blank"><img src="img/intelectuales.jpg" alt="Querid&iacute;simos intelectuales" /></a>
-             <article>
-                <h3><a href="http://queridisimosintelectuales.com/" target="_blank">Querid&iacute;simos intelectuales</a></h3>
-                <p>Information architecture, design and development of the website for a nice documentary film.</p>
-                <p><a href="http://queridisimosintelectuales.com/" target="_blank">http://queridisimosintelectuales.com/</a></p>
-             </article>
-		 </article>
-
-         <!-- <article class="third">
-         	 <a href="http://fodera.gridchin.com/" target="_blank"><img src="img/fodera.jpg" alt="Fodera" /></a>	
-             <article>
-                <h3><a href="http://fodera.gridchin.com/" target="_blank">Fodera</a></h3>
-                <p>Redesign of Fodera's website, the leader in handmade bass guitars.</p>
-                <p><a href="http://fodera.gridchin.com/" target="_blank">http://fodera.gridchin.com/</a></p>
-             </article>
-		 </article> -->
-
-     </section><!-- end #work -->
+        <section id="about">
+        
+            <header>
+            	<a href="#about">About</a>
+            </header>
+        
+            <article>
+            	<h1>Hi!</h1>
+            	<p>My name is Denis. I'm a minimalist front-end designer &amp; developer. <br />I make usable, simple and beautiful websites. I also enjoy coding designs to make them alive.</p>
+            	<p>I live in Barcelona with my <a href="http://gridchin.com/experiments/muah/" target="_blank">beautiful wife</a>, and work at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a>. <br />I'm Cuban and speak Spanish, English and Russian. I also love playing my bass guitar.</p>  
+            </article>
           
+            <article>
+	            <h1>Mentions</h1>
+    	        <ul>
+					<li>
+						<a href="http://www.awwwards.com/best-websites/denis-fernandez-gridchin" target="_blank">Awwwards</a>
+					</li>
+					<li>
+						<a href="http://mediaqueri.es/grd/" target="_blank">Media Queries</a>
+					</li>
+					<li>
+						<a href="http://cssreel.com/Website/denis-fernandez-gridchin" target="_blank">CSS Website Awards</a>
+					</li>
+	              	<li>
+	              		<a href="http://designwoop.com/2012/01/30-inspiring-examples-of-big-typography-in-web-design/" target="_blank">30 Inspiring Examples of Big Typography in Web Design</a>
+	              	</li>
+    	          	<li>
+    	          		<a href="http://www.uxde.net/2011/11/12/clean-minimalist-web-designs-best-of/" target="_blank">Best of Minimalist Web Designs</a>
+    	          	</li>
+        	      	<li>
+        	      		<a href="http://www.webdesignerdepot.com/2011/09/the-ultimate-responsive-web-design-roundup/" target="_blank">Responsive Web Design Roundup</a>
+        	      	</li>
+            	  	<li>
+            	  		<a href="http://www.yourinspirationweb.com/2010/04/26/come-mostrare-se-stessi-nel-proprio-sito-web-consigli-e-tendenze/" target="_blank">Inspiration Web</a>
+            	  	</li>
+              		<li>
+              			<a href="http://html5gallery.com/2009/10/denis-fernndez-gridchin/" target="_blank">HTML5 Gallery</a>
+              		</li>
+              		<li>
+              			<a href="http://www.webinspeer.com/denis-fernandez-gridchin/" target="_blank">Web Design Inspiration Gallery</a>
+              		</li>
+              		<li>
+              			<a href="http://den.girnyk.com/" target="_blank">Web Developer Entries</a>
+              		</li>
+              		<li>
+              			<a href="http://onepagelove.com/denis-fernandez-gridchin/" target="_blank">One Page Love</a>
+              		</li>
+              		<li>
+              			<a href="http://www.awwwards.com/best-websites/elisava-escola-superior-de-disseny" target="_blank">Awwwards Elisava</a>
+              		</li>
+	            </ul>
+    	    </article>
+    	    
+    	    <article>
+            	<h1>Mail</h1>
+            	<a href="mailto:denis@gridchin.com">denis@gridchin.com</a>
+            	<h1 class="phone">Phone</h1>
+            	<a href="tel:+34651721164">+34 651.721.164</a>
+            </article>
+
+        </section><!-- services -->
+
+
+        <section id="work">
+        
+        	<header>
+        		<a href="#work">Work</a>
+        	</header>
           
-     <section id="clients">
-     	 <div class="h2_cont grid_12">
-         	<h2>Clients</h2>
-         </div>
-         <a href="http://www.elisava.net/" target="_blank"><img src="img/elisava_logo.jpg" class="fourth" alt="ELISAVA" /></a>
-         <a href="http://www.mariscal.com/" target="_blank"><img src="img/mariscal_logo.jpg" class="fourth" alt="Estudio Mariscal" /></a>
-         <a href="http://www.min.cult.cu/" target="_blank"><img src="img/mincult_logo.jpg" class="fourth" alt="Ministerio de Cultura de Cuba" /></a>
-         <a href="http://www.fodera.com/" target="_blank"><img src="img/fodera_logo.jpg" class="fourth" alt="Fodera" /></a>
-     </section><!-- end #clients -->
-     
-     
-     <section id="contact">
-     	 <div class="h2_cont grid_12">
-         	<h2>Contact</h2>
-         </div>
-         
-         <div class="fourth">
-         	<h3>Mail</h3>
-            <a href="mailto:denis@gridchin.com">denis@gridchin.com</a>
-            <h3 id="phone">Phone</h3>
-            <a href="tel:+34651721164">+34 651.721.164</a>
-         </div>
-         
-         <div class="fourth">
-         	<h3>Follow me</h3>
-            <ul class="list">
-                <li><a href="http://twitter.com/gridchin" target="_blank">twitter</a></li>
-                <li><a href="http://www.linkedin.com/in/gridchin" target="_blank">linkedin</a></li>
-                <li><a href="http://www.facebook.com/gridchin" target="_blank">facebook</a></li>
-                <li><a href="http://www.myspace.com/gridchin" target="_blank">myspace</a></li>
-                <li><a href="http://dribbble.com/gridchin" target="_blank">dribbble</a></li>
-            </ul>
-         </div>
-         
-         <div>
-         	<h3>My friends</h3>
-            <ul class="list fourth"> 
-               	<li><a href="http://www.albagcorral.com/" target="_blank">Alba G. Corral</a></li>
-                <li><a href="http://www.mariale.net/" target="_blank">Jorge Penny</a></li>
-                <li><a href="http://www.mariscal.com/" target="_blank">Javier Mariscal</a></li>
-                <li><a href="http://www.ivoserrano.com/" target="_blank">Ivan Serrano</a></li>
-                <li><a href="http://www.landermuruaga.com/" target="_blank">Lander Muruaga</a></li>
-            </ul>
-            <ul class="list fourth">
-                <li><a href="http://www.eleonoramajorana.com/" target="_blank">Eleonora Majorana</a></li>
-               	<li><a href="http://www.renatarodrigues.com/" target="_blank">Renata Rodrigues</a></li>
-                <li><a href="http://www.rodrigoronda.com/" target="_blank">Rodrigo Ronda</a></li>
-                <li><a href="http://dicepb.wordpress.com/" target="_blank">Jorge Batista</a></li>
-                <li><a href="http://www.luciawalter.com/" target="_blank">Luc&iacute;a Walter</a></li>
-            </ul>
-         </div>
-         
-     </section><!-- end #contact -->
-	
-     
-     <footer>
-     	 
-         <a href="#top"><img src="files/top.jpg" alt="back-to-top" /></a>
-         <p>Built with HTML5, CSS3, Typekit &amp; Media Queries</p>
-         <section id="social">
+        	<article>
+            	<h1>Services</h1>
+            	<ul>
+            		<li>HTML5 &amp; CSS3</li>
+            		<li>JavaScript libraries</li>
+            		<li>Cross-browser compatibility</li>
+            		<li>User Experience (UX) design</li>
+            		<li>User Interface (UI) development</li>
+            		<li>Responsive design</li>
+            		<li>Responsive development</li>
+            		<li>CSS3 Animations & Transitions</li>
+            		<li>Usability &amp; accessibility</li>
+            		<li>Social networking development</li>
+            		<li>Content management</li>
+            		<li>SEO &amp; SEM</li>
+            	</ul>
+          	</article>
+          
+          	<article class="work">
+                <h1>Portfolio</h1>
+                <ul>
+                    <li>
+                    	<a href="http://www.mariscal.com/" target="_blank">Estudio Mariscal</a>
+                    </li>
+                    <li>
+                    	<a href="http://chicoandrita.com/home.html" target="_blank">Chico &amp; Rita</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.elisava.gridchin.com/" target="_blank">ELISAVA</a>
+                    </li>
+                    <li>
+                    	<a href="http://linkedin.friend2friend.com/" target="_blank">LinkedIn Engagement Showcase</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.nametaganalyzer.com/" target="_blank">LinkedIn app for Microsoft</a>
+                    </li>
+                    <li>
+                    	<a href="http://doubletree-site.w1.friend2friend.com/" target="_blank">LinkedIn app for DoubleTree</a>
+                    </li>
+                    <li>
+                    	<a href="http://les-miserables-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - Les Mis&eacute;rables</a>
+                    </li>                    
+                    <li>
+                    	<a href="http://www.facebook.com/DespicableMe/app_379757252052054" target="_blank">Universal Pictures - Despicable Me</a>
+                    </li>
+                    <li>
+                    	<a href="http://universal-thisis40-facebook.w1.friend2friend.com/" target="_blank">Universal Pictures - This Is 40</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.lalalatoys.com/" target="_blank">lalalatoys</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.soyhugo.com/" target="_blank">Soy Hugo</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.buscarte.cult.cu/" target="_blank">buscARTE</a>
+                    </li>
+                    <li>
+                    	<a href="http://queridisimosintelectuales.com/" target="_blank">Queridisimos Intelectuales</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.pixelcity.es/" target="_blank">PIXELCITY</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.gridchin.com/carlos/a3a/" target="_blank">A3A Consulting</a>
+                    </li>                    
+                    <li>
+                    	<a href="http://www.gridchin.com/old/" target="_blank">Gridchin</a>
+                    </li>
+                    <li>
+                    	<a href="https://www.facebook.com/outsidemagazine?sk=app_414906338552749" target="_blank">So there I was</a>
+                    </li>
+                    <li>
+                    	<a href="https://www.facebook.com/newbelgium/app_203314013038634" target="_blank">New Belgium Radio</a>
+                    </li>
+                    <li>
+                    	<a href="http://newbelgium-map-facebook.w1.friend2friend.com/" target="_blank">New Belgium Map</a>
+                    </li>
+                    <li>
+                    	<a href="https://ikea-carta-facebook.w1.friend2friend.com/" target="_blank">IKEA Letter</a>
+                    </li>
+                    <li>
+                    	<a href="https://ikea-video-facebook.w1.friend2friend.com/" target="_blank">IKEA Video</a>
+                    </li>
+                    <li>
+                    	<a href="http://ikea-malaga-facebook.w1.friend2friend.com/" target="_blank">IKEA Sevilla</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.compartetueuphoria.com/" target="_blank">Calvin Klein Euphoria</a>
+                    </li>
+                    <li>
+                    	<a href="http://cayman-islands2-facebook.w1.friend2friend.com/" target="_blank">The Cayman Islands</a>
+                    </li>
+                    <li>
+                    	<a href="http://outside-btowns2013-facebook.w1.friend2friend.com/" target="_blank">Outside Best Towns 2013</a>
+                    </li>
+                    <li>
+                    	<a href="http://harpoon-ipa20-facebook.w1.friend2friend.com/" target="_blank">Harpoon IPA 20</a>
+                    </li>                 
+                    <li>
+                    	<a href="http://www.spongebobfanclub.com/" target="_blank">SpongeBob Fan Club</a>
+                    </li>
+                    <li>
+                    	<a href="http://nick-30-days-facebook.w1.friend2friend.com/" target="_blank">30 Days of Spongebob</a>
+                    </li>
+                    <li>
+                    	<a href="http://kca.w5.friend2friend.com/" target="_blank">Kids Choice Awards 2013</a>
+                    </li>
+                </ul>
+            </article>
+              
+            <article>
+                <h1>Experiments</h1>
+                <ul>
+                	<li>
+                		<a href="http://gridchin.com/experiments/feelings/" target="_blank">Feelings</a>
+                	</li>
+                	<li>
+                		<a href="http://gridchin.com/2013/" target="_blank">2013</a>
+                	</li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/euro/" target="_blank">Euro</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/map/" target="_blank">Let's play some chess</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/flipping/" target="_blank">Flipping</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/flipping2/" target="_blank">Flipping 2</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/shoot/" target="_blank">Shoot the squire</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/random/" target="_blank">Random</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/random2/" target="_blank">Random 2</a>
+                    </li>
+                    <li>
+                    	<a href="http://wwwwwwwww.gridchin.com/" target="_blank">9w</a>
+                    </li>
+                    <li>
+                    	<a href="http://gridchin.com/experiments/muah/" target="_blank">Muah</a>
+                    </li>
+                </ul>
+            </article>
 
-             <div id="twitter">
-             	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="gridchin" >Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-             </div>
-                          
-             <div id="google">
-             	<g:plusone size="medium"></g:plusone>
-             </div>
-             
-             <div id="fbk">   
-                 <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.gridchin.com/" send="false" layout="button_count" width="100" show_faces="false" action="like" font=""></fb:like>
-                 <!-- <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.gridchin.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe> -->
-             </div>
-             
-     	 </section><!-- end #social --> 
-     </footer><!-- end #footer -->
+        </section>
+                
+        
+        <section id="connect">
+        
+            <header>
+            	<a href="#connect">Connect</a>
+            </header>
+           
+            <article>
+                <h1>Mail</h1>
+                <a href="mailto:denis@gridchin.com">denis@gridchin.com</a>
+                <h1 class="phone">Phone</h1>
+                <a href="tel:+34651721164">+34 651.721.164</a>
+            </article>
+            
+            <article>
+                <h1>Follow me</h1>
+                <ul>
+                    <li>
+                    	<a href="http://www.linkedin.com/in/gridchin" target="_blank">linkedin</a>
+                    </li>
+                    <li>
+                    	<a href="http://twitter.com/gridchin" target="_blank">twitter</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.facebook.com/gridchin" target="_blank">facebook</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.myspace.com/gridchin" target="_blank">myspace</a>
+                    </li>
+                    <li>
+                    	<a href="http://dribbble.com/gridchin" target="_blank">dribbble</a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article>
+                <h1>Friends</h1>
+                <ul>
+                    <li>
+                    	<a href="http://www.soyhugo.com/" target="_blank">Hugo Men&eacute;ndez</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.lalalatoys.com/" target="_blank">Jorge Penny</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.albagcorral.com/" target="_blank">Alba G. Corral</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.mariscal.com/" target="_blank">Javier Mariscal</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.landermuruaga.com/" target="_blank">Lander Muruaga</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.eleonoramajorana.com/" target="_blank">Eleonora Majorana</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.renatarodrigues.com/" target="_blank">Renata Rodrigues</a>
+                    </li>
+                    <li>
+                    	<a href="http://dicepb.wordpress.com/" target="_blank">Jorge Batista</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.luciawalter.com/" target="_blank">Luc&iacute;a Walter</a>
+                    </li>
+                </ul>
+            </article>
 
+        </section><!-- connect -->
 
+    </div><!-- content -->   
+    
+    <footer></footer>
+
+    <!-- Typekit fonts load -->
+    <p class="fonts">&nbsp;<span>&nbsp;</span></p>  
+    		
+	<!-- Google Analytics -->
+    <meta name="verify-v1" content="XrXZJyPaLNYkrdocjQ4KfcxsazxX4ZeLoNWWdpGOuxs=" />
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-10248995-1");
+    pageTracker._trackPageview();
+    } catch(err) {}
+    </script> 	
+    
+    <!-- Begin W3Counter Tracking Code -->
+    <div class="w3counter">
+		<script type="text/javascript" src="http://www.w3counter.com/tracker.js"></script>
+		<script type="text/javascript">
+		w3counter(62534);
+		</script>
+		<noscript>
+		<div>
+			<a href="http://www.w3counter.com">
+				<img src="http://www.w3counter.com/tracker.php?id=62534" alt="W3Counter" />
+			</a>
+		</div>
+		</noscript>
+	</div>		
+	    
 </body>
-	
 </html>
+
+<!-- Happy End -->
