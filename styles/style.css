@@ -16,7 +16,7 @@
 	}
 	
 	body {
-		font: 14px/1.6 "gesta-1","gesta-2",Verdana,sans-serif;
+		font: 400 14px/1.6 "gesta",Verdana,sans-serif;
 		color: #333;
 		background-color: #fff;
         text-align: center;
@@ -48,23 +48,73 @@
 	  
 	h1 {
 		font-size: 14px;
-		font-weight: normal;
+		font-weight: 400;
 	}
   
 /* @end */
 
 
-/* @group LOGO */
-	
-	.section-logo{
-		display: table;
+/* @group TRANSITION */
+
+	.tr{
+		-webkit-transition: all 2s;
+		   -moz-transition: all 2s;
+			 -o-transition: all 2s;
+				transition: all 2s;
+	}
+
+	.fade{
+		opacity: 0;
+	}
+
+/* @end */
+
+
+/* @group LAYOUT */
+
+	section {
+	    position: relative;
+	    display: block;
+	}
+
+	.section-table {
+	    display: table;
 		text-align: center;
 		width: 100%;
 		height: 100%;
 	}
 
+	.section-table .title {
+		position: relative;
+		font-size: 3em;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		z-index: 1;
+	}
+
+	.section-table .iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+		
+/* @end */
+
+
+
+
+
+/* @group LOGO */
+	
 	#logo-canvas,
-	#shadow-canvas{
+	#shadow-canvas {
 		display: none
 	}
 		
@@ -80,23 +130,15 @@
 		margin-top: -20px; 
 	}
 
-	.logo canvas{
+	.logo canvas {
 		margin: 0 auto;
 	}
 	
 /* @end */
 
 
-/* @group LAYOUT */
 
-	section {
-	    position: relative;
-	    display: block;
-	}
 
-		
-
-/* @end */
 
 
 /* @group FOOTER */

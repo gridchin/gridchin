@@ -36,6 +36,10 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/onepage-scroll.css" rel="stylesheet" />
 	<link href="styles/style.css" rel="stylesheet" />
+
+	<!-- Fonts -->
+    <script type="text/javascript" src="//use.typekit.net/wzm5jkn.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
@@ -49,45 +53,44 @@
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src="scripts/jquery.js"><\/script>')</script>
-	<script type="text/javascript" src="scripts/logo/logo.js"></script>
-	<script type="text/javascript" src="scripts/logo/logo.util.min.js"></script>
-	<script type="text/javascript" src="scripts/logo/logo.input.move.js"></script>
-	<script type="text/javascript" src="scripts/logo/logo.input.press.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script type="text/javascript" src="js/logo/logo.js"></script>
+	<script type="text/javascript" src="js/logo/logo.util.min.js"></script>
+	<script type="text/javascript" src="js/logo/logo.input.move.js"></script>
+	<script type="text/javascript" src="js/logo/logo.input.press.js"></script>
 		
 </head>
 <body>
 
 	<div class="main">
 	
-	    <section class="section-logo">
-	    	<header id="logo" class="logo">
+	    <section class="section-table">
+	    	<header id="logo" class="logo tr fade">
 				<canvas id="logo-canvas"></canvas> 
 				<canvas id="shadow-canvas"></canvas> 
-				<script type="text/javascript" src="scripts/logo/logo.initialize.js"></script>
+				<script type="text/javascript" src="js/logo/logo.initialize.js"></script>
 		    	<h1>Denis Fernandez Gridchin</h1>
 		    	<p>front-end designer &amp; developer</p>
 		    </header>
 	    </section>
 	    
-	    <section>
-	    	<h1>Work</h1>
-	    	<canvas id="work"></canvas>
+	    <section class="section-table">
+	    	<h1 class="title">Work</h1>
+	    	<iframe id="work" class="iframe tr" src="//gridchin.com/experiments/infinity/" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 	    </section>
 	    
-	    <section>
-	    	<h1>Experiments</h1>
-	    	<canvas id="experiments"></canvas>
+	    <section class="section-table">
+	    	<h1 class="title">Experiments</h1>
+	    	<iframe id="experiments" class="iframe tr" src="//gridchin.com/experiments/disorder/" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 	    </section>
 	    
 	</div>
   	
   	<!-- Scripts -->
   	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="scripts/jquery.onepage-scroll.min.js"></script>
-	<script src="http://use.typekit.com/hku8tyb.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-	<script src="scripts/script.js"></script>
+	<script src="js/jquery.onepage-scroll.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/script.js"></script>
 
 	<!-- Google Analytics -->
     <script>
