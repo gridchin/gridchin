@@ -1,13 +1,16 @@
 $(document).ready(function() {
 
-	$('#logo')
+	$('.main')
 		.delay(300)
 		.removeClass('fade');
 
 	$(".main").onepage_scroll({
 		sectionContainer: "section",
 		responsiveFallback: 600,
-		loop: true
+		pagination: false,
+		loop: false,
+		updateUrl: true,
+		responsiveFallback: 600
 	});
 	
 	// $('#logo').on('click', function() {
