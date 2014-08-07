@@ -24,6 +24,10 @@
 		-webkit-text-size-adjust: 100%; 
 		-webkit-tap-highlight-color: rgb(255,255,0);
 	}
+
+	ul li{
+		list-style-type: none;
+	}
 	  
 	a,
 	a img {
@@ -110,7 +114,23 @@
 /* @end */
 
 
+/* @group NAV */
 
+	nav a{
+		position: fixed;
+		text-transform: uppercase;
+		z-index: 1;
+		font-weight: bold;
+		color: #333;
+	}
+
+	.nav-a{
+		top: 20px;
+		left: 50%;
+		margin-left: -20px;
+	}
+
+/* @end */
 
 
 /* @group LOGO */
