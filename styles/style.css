@@ -116,43 +116,33 @@
 
 /* @group NAV */
 
-	/*nav a{
+	.navbar-nav > li{
+		float: none;
+		text-align: right;
+	}
+
+	.navbar-default .navbar-toggle{
+		
+	}
+
+	.navbar-nav,
+	.navbar-toggle{
+		float: right;
+	}
+
+	.navbar-default .navbar-collapse,
+	.navbar-default .navbar-form{
+		border: none;
+	}
+
+	.navbar-default{
+		background-color: transparent;
+		border: none;
 		position: fixed;
-		text-transform: uppercase;
+		top: 0;
+		right: 0;
 		z-index: 1;
-		font-weight: bold;
-		color: #333;
 	}
-
-	.nav-a{
-		top: 20px;
-		left: 50%;
-		margin-left: -20px;
-	}
-
-	.nav-b{
-		top: 50%;
-		right: 20px;
-		margin-top: -10px;
-		-webkit-transform: rotate(90deg);
-		   -moz-transform: rotate(90deg);
-				transform: rotate(90deg);
-	}
-
-	.nav-c{
-		bottom: 20px;
-		left: 50%;
-		margin-left: -20px;
-	}
-
-	.nav-d{
-		top: 50%;
-		left: 0;
-		margin-top: -10px;
-		-webkit-transform: rotate(-90deg);
-		   -moz-transform: rotate(-90deg);
-				transform: rotate(-90deg);
-	}*/
 
 /* @end */
 
@@ -160,11 +150,11 @@
 /* @group LOGO */
 	
 	#logo-canvas,
-	#shadow-canvas {
+	#shadow-canvas{
 		display: none
 	}
 		
-	.logo {
+	.logo{
 		display: table-cell;
 		vertical-align: middle;
 		margin: 0 auto;
@@ -172,11 +162,11 @@
 		text-align: center;
 	}
 	
-	.logo h1 {
+	.logo h1{
 		margin-top: -20px; 
 	}
 
-	.logo canvas {
+	.logo canvas{
 		margin: 0 auto;
 	}
 	
