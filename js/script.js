@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	$('.main')
-		.delay(300)
-		.removeClass('fade');
+	// $('.main')
+	// 	.delay(300)
+	// 	.removeClass('fade');
 
 	$(".main").onepage_scroll({
 		sectionContainer: "section",

@@ -31,7 +31,7 @@
 	  
 	a,
 	a img {
-		color: #999;
+		color: #333;
 		outline: none;
 		-webkit-transition: all 0.5s ease-in-out; 
 		-moz-transition: all 0.5s ease-in-out; 
@@ -40,7 +40,7 @@
 	}
 	 
 	a:hover {
-		color: #333;
+		color: #999;
 		text-decoration: none;
 	}
 	   
@@ -61,10 +61,10 @@
 /* @group TRANSITION */
 
 	.tr{
-		-webkit-transition: all 3s;
-		   -moz-transition: all 3s;
-			 -o-transition: all 3s;
-				transition: all 3s;
+		-webkit-transition: all .3s;
+		   -moz-transition: all .3s;
+			 -o-transition: all .3s;
+				transition: all .3s;
 	}
 
 	.fade{
@@ -173,7 +173,110 @@
 /* @end */
 
 
+/* @group ABOUT */
 
+	.about{
+		color: #fff;
+		background: transparent url("http://imgh.us/bg_1.svg") no-repeat center;
+		background-size: cover; 
+	}
+
+/* @end */
+
+
+/* @group WORK */
+	
+	.project{
+		width: 100%;
+		height: 100%;
+		background: transparent no-repeat center;
+	}
+
+	.project article{
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		padding: 20px;
+		background-color: rgba(255,255,255,.75);
+		text-align: left;
+	}
+
+	.project ul{
+		margin: 0;
+		padding: 0;
+		color: #888;
+	}
+
+	.project h1{
+		font-size: 2em;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin: 0 0 10px;
+	}
+
+	.project a .glyphicon{
+		font-size: .7em;
+		top: 0;
+	}
+
+	.project a:hover{
+		color: #333;
+	}
+
+	.project a:hover .glyphicon{
+		color: #08c;
+	}
+
+	.project.samsung-s5{
+		background-image: url('../assets/projects/samsung-s5.png');
+	}
+
+	.project.samsung-tab-s{
+		background-image: url('../assets/projects/samsung-tab-s.jpg');
+	}
+
+	.project.statoil{
+		background-image: url('../assets/projects/statoil.jpg');
+	}
+
+	.project.linkedin{
+		background-image: url('../assets/projects/linkedin.jpg');
+	}
+
+	.project.f2f{
+		background-image: url('../assets/projects/f2f.jpg');
+	}
+
+	.project.mariscal{
+		background-image: url('../assets/projects/mariscal.jpg');
+	}
+
+	.project.hilton{
+		background-image: url('../assets/projects/hilton.jpg');
+	}
+
+	.project.lalalatoys{
+		background-image: url('../assets/projects/lalalatoys.jpg');
+	}
+
+	.project.soyhugo{
+		background-image: url('../assets/projects/soyhugo.jpg');
+	}
+
+	.project.intelectuales{
+		background-image: url('../assets/projects/intelectuales.jpg');
+	}
+
+	.project.gridchin{
+		background-image: url('../assets/projects/gridchin.jpg');
+	}
+
+	.project.spongebobfanclub{
+		background-image: url('../assets/projects/spongebobfanclub.png');
+	}
+
+/* @end */
 
 
 
