@@ -178,7 +178,7 @@
 
 	.about{
 		color: #fff;
-		background: transparent url("http://imgh.us/bg_1.svg") no-repeat center;
+		background: transparent url("../assets/bg-about.svg") no-repeat center;
 		background-size: cover; 
 	}
 
