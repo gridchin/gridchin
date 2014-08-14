@@ -4,6 +4,7 @@ $(document).ready(function() {
 	// 	.delay(300)
 	// 	.removeClass('fade');
 
+	// scroll effect
 	$(".main").onepage_scroll({
 		sectionContainer: "section",
 		responsiveFallback: 600,
@@ -13,6 +14,13 @@ $(document).ready(function() {
 		responsiveFallback: 600
 	});
 	
+	// iframe fix on FF
+	var isFirefox = typeof InstallTrigger !== 'undefined'; 
+	if (isFirefox == true) {
+		$('.iframe').css('pointer-events', 'none');
+	};
+
+	// ANALYTICS, activate later
 	// $('#logo').on('click', function() {
 	// 	ga('send', 'event', '#logo', 'click');
 	// });

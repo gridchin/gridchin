@@ -109,6 +109,7 @@
 		height: 100%;
 		z-index: 0;
 		opacity: .5;
+		/*pointer-events: none;*/
 	}
 		
 /* @end */
