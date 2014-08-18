@@ -40,7 +40,7 @@
 	}
 	 
 	a:hover {
-		color: #999;
+		color: #08c;
 		text-decoration: none;
 	}
 	   
@@ -79,29 +79,51 @@
 	section {
 	    position: relative;
 	    display: block;
-	}
-
-	.section-table {
-	    display: table;
-		text-align: center;
 		width: 100%;
 		height: 100%;
 	}
 
-	.section-table .title {
+	.section-table{
+	    display: table;
+		text-align: center;
+	}
+
+	.section-table .cell{
 		position: relative;
-		font-size: 3em;
-		font-weight: 300;
-		text-transform: uppercase;
-		letter-spacing: 1px;
 		width: 100%;
 		display: table-cell;
 		vertical-align: middle;
 		z-index: 1;
-		pointer-events: none;
+	}
+		
+/* @end */
+
+
+/* @group TITLES */
+
+	.title{
+		text-align: center;
 	}
 
-	.section-table .iframe{
+	.title h1{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -23px 0 0 -200px;
+		width: 400px;
+		font-size: 3em;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		vertical-align: middle;
+		z-index: 1;
+	}
+
+	.title h1 span{
+		letter-spacing: -4.2px;
+	}
+
+	.title iframe{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -109,8 +131,20 @@
 		height: 100%;
 		z-index: 0;
 		opacity: .5;
-		/*pointer-events: none;*/
 	}
+
+	.title .work{
+		padding-left: 10px;
+	}
+
+	.experiments:hover a{
+		opacity: .3;
+	}
+
+	.experiments a:hover{
+		color: #333;
+		opacity: 1;
+	}	
 		
 /* @end */
 
@@ -167,6 +201,11 @@
 		margin-top: -20px; 
 	}
 
+	.logo p{
+		font-size: 2em;
+		text-transform: uppercase;
+	}
+
 	.logo canvas{
 		margin: 0 auto;
 	}
@@ -188,9 +227,15 @@
 /* @group WORK */
 	
 	.project{
-		width: 100%;
-		height: 100%;
 		background: transparent no-repeat center;
+	}
+
+	.project.contain{
+		background-size: contain;
+	}
+
+	.project.cover{
+		background-size: cover;
 	}
 
 	.project article{
@@ -200,6 +245,14 @@
 		padding: 20px;
 		background-color: rgba(255,255,255,.75);
 		text-align: left;
+		-webkit-transition: all .3s;
+		   -moz-transition: all .3s;
+			 -o-transition: all .3s;
+				transition: all .3s;
+	}
+
+	.project article:hover{
+		background-color: #fff;
 	}
 
 	.project ul{
@@ -230,7 +283,7 @@
 	}
 
 	.project.samsung-s5{
-		background-image: url('../assets/projects/samsung-s5.png');
+		background-image: url('../assets/projects/samsung-s5.jpg');
 	}
 
 	.project.samsung-tab-s{
@@ -254,7 +307,7 @@
 	}
 
 	.project.hilton{
-		background-image: url('../assets/projects/hilton.jpg');
+		background-image: url('../assets/projects/hilton-a.jpg');
 	}
 
 	.project.lalalatoys{

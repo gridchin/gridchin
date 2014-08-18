@@ -17,7 +17,7 @@ $(document).ready(function() {
 	// iframe fix on FF
 	var isFirefox = typeof InstallTrigger !== 'undefined'; 
 	if (isFirefox == true) {
-		$('.iframe').css('pointer-events', 'none');
+		$('.title iframe').css('pointer-events', 'none');
 	};
 
 	// ANALYTICS, activate later
