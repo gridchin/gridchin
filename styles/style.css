@@ -283,7 +283,8 @@
 	}
 
 	.project.samsung-s5{
-		background-image: url('../assets/projects/samsung-s5.jpg');
+		background-image: url('../assets/projects/samsung-s5.png');
+		background-position: center top;
 	}
 
 	.project.samsung-tab-s{
