@@ -10,19 +10,30 @@
 /* @group GLOBAL */
 	
 	html,
-	body {
+	body{
 		width: 100%;
 		height: 100%;
 	}
 	
-	body {
+	body{
 		font: 400 14px/1.6 "gesta",Verdana,sans-serif;
 		color: #333;
 		background-color: #fff;
-        text-align: center;
         -webkit-font-smoothing: antialiased;
 		-webkit-text-size-adjust: 100%; 
 		-webkit-tap-highlight-color: rgb(255,255,0);
+	}
+
+	::selection{
+		background-color: transparent;
+	}
+	
+	::-moz-selection{ 
+		background-color: transparent; 
+	}
+
+	ul{
+		padding: 0;
 	}
 
 	ul li{
@@ -30,7 +41,7 @@
 	}
 	  
 	a,
-	a img {
+	a img{
 		color: #333;
 		outline: none;
 		-webkit-transition: all 0.5s ease-in-out; 
@@ -39,18 +50,18 @@
 		transition: all 0.5s ease-in-out	
 	}
 	 
-	a:hover {
+	a:hover{
 		color: #08c;
 		text-decoration: none;
 	}
 	   
 	a img, 
-	a:hover img {
+	a:hover img{
 		border: 0;
 		outline: none;
 	}
 	  
-	h1 {
+	h1{
 		font-size: 14px;
 		font-weight: 400;
 	}
@@ -76,19 +87,18 @@
 
 /* @group LAYOUT */
 
-	section {
+	section{
 	    position: relative;
 	    display: block;
 		width: 100%;
 		height: 100%;
 	}
 
-	.section-table{
+	.table{
 	    display: table;
-		text-align: center;
 	}
 
-	.section-table .cell{
+	.table .cell{
 		position: relative;
 		width: 100%;
 		display: table-cell;
@@ -133,17 +143,13 @@
 		opacity: .5;
 	}
 
+	.title a:hover{
+		color: #333;
+		opacity: .5;
+	}
+
 	.title .work{
 		padding-left: 10px;
-	}
-
-	.experiments:hover a{
-		opacity: .3;
-	}
-
-	.experiments a:hover{
-		color: #333;
-		opacity: 1;
 	}	
 		
 /* @end */
@@ -216,9 +222,13 @@
 /* @group ABOUT */
 
 	.about{
-		color: #fff;
 		background: transparent url("../assets/bg-about.svg") no-repeat center;
 		background-size: cover; 
+	}
+
+	.about a,
+	.about a:hover{
+		color: #fff;
 	}
 
 /* @end */
@@ -244,7 +254,6 @@
 		left: 20px;
 		padding: 20px;
 		background-color: rgba(255,255,255,.75);
-		text-align: left;
 		-webkit-transition: all .3s;
 		   -moz-transition: all .3s;
 			 -o-transition: all .3s;
@@ -308,7 +317,7 @@
 	}
 
 	.project.hilton{
-		background-image: url('../assets/projects/hilton-a.jpg');
+		background-image: url('../assets/projects/hilton.jpg');
 	}
 
 	.project.lalalatoys{

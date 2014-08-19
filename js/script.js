@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	// $('.main')
-	// 	.delay(300)
-	// 	.removeClass('fade');
+	$('.main')
+		.delay(300)
+		.removeClass('fade');
 
 	// scroll effect
 	$(".main").onepage_scroll({
@@ -13,6 +13,11 @@ $(document).ready(function() {
 		updateUrl: true,
 		responsiveFallback: 600
 	});
+
+	$('.title a').click(function(){
+		$(".main").moveDown();
+		return false;
+	})
 	
 	// iframe fix on FF
 	var isFirefox = typeof InstallTrigger !== 'undefined'; 
