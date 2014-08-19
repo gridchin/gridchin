@@ -50,9 +50,11 @@
 		transition: all 0.5s ease-in-out	
 	}
 	 
-	a:hover{
-		color: #08c;
+	a:hover,
+	a:focus{
+		color: #333;
 		text-decoration: none;
+		outline: none;
 	}
 	   
 	a img, 
@@ -98,7 +100,7 @@
 	    display: table;
 	}
 
-	.table .cell{
+	.cell{
 		position: relative;
 		width: 100%;
 		display: table-cell;
@@ -109,11 +111,35 @@
 /* @end */
 
 
-/* @group TITLES */
+/* @group INFO */
 
-	.title{
-		text-align: center;
+	.info h1{
+		font-size: 2em;
+		text-transform: uppercase;
 	}
+
+	.info h2{
+		font: normal 2em/1.6 'adobe-garamond-pro',serif;
+		margin-bottom: 20px;	
+	}
+
+	.info p{
+		margin-bottom: 22px;
+	}
+
+	.info p,
+	.info a{
+		color: #888;
+	}
+
+	.info a:hover{
+		color: #333;
+	}
+
+/* @end */
+
+
+/* @group TITLES */
 
 	.title h1{
 		position: absolute;
@@ -123,14 +149,11 @@
 		width: 400px;
 		font-size: 3em;
 		font-weight: 300;
+		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		vertical-align: middle;
 		z-index: 1;
-	}
-
-	.title h1 span{
-		letter-spacing: -4.2px;
 	}
 
 	.title iframe{

@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
-	$('.main')
-		.delay(300)
-		.removeClass('fade');
+	setTimeout(function() {
+		$('.main').animate({
+			opacity: 1
+		},2000, function() {
+			$('.main').removeClass('fade');
+		});
+	}, 1000);
 
 	// scroll effect
 	$(".main").onepage_scroll({
