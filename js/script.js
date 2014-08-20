@@ -1,13 +1,10 @@
 $(document).ready(function() {
 
-	setTimeout(function() {
-		$('.main').animate({
-			opacity: 1
-		},2000, function() {
-			$('.main').removeClass('fade');
-		});
-	}, 1000);
-
+	// show content
+	// setTimeout(function() {
+	$('.main').fadeIn(2000).removeClass('display');
+	// },1000);
+	
 	// scroll effect
 	$(".main").onepage_scroll({
 		sectionContainer: "section",
