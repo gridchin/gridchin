@@ -246,6 +246,7 @@
 	.modal nav{
 		text-align: center;
 		position: relative;
+		/*right: auto;*/
 		top: 50%;
 		height: 60%;
 		-webkit-transform: translateY(-50%);
@@ -283,6 +284,10 @@
 		opacity: 1;
 	}
 
+	/*.onepage-pagination li a.active::before,
+	.onepage-pagination li a::before{
+		display: none;
+	}*/
 	
 
 /* @end */
