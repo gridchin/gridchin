@@ -12,7 +12,10 @@ $(document).ready(function() {
 		pagination: false,
 		loop: false,
 		updateUrl: true,
-		responsiveFallback: 600
+		responsiveFallback: 600,
+		beforeMove: function(index) {
+	    	$('.next').fadeOut('fast');
+	    }
 	});
 
 	// keep scrolling
@@ -22,19 +25,57 @@ $(document).ready(function() {
 	})
 
 	// menu
-	$('.modal a').click(function() {
-		$('#modal').modal('hide');
+	$('body').on('click', '.menu', function() {
+		$('#menu').toggleClass('menu close');
+		$('#modal').fadeIn();
+		return false;
+	}).on('click', '.close', function() {
+		$('#menu').toggleClass('menu close');
+		$('#modal').fadeOut();
+		return false;
+	});
+	$('#about').click(function() {
+		$(".main").moveTo(2);
+		return false;
+	});
+	$('#work').click(function() {
+		$(".main").moveTo(4);
+		return false;
+	});
+	$('#experiments, #experiments-anchor').click(function() {
+		$(".main").moveTo(16);
+		return false;
+	});
+	$('#connect').click(function() {
+		$(".main").moveTo(18);
+		return false;
+	});
+	$('#modal a').click(function() {
+		$('#modal').fadeOut();
+		$('#menu').removeClass('close').addClass('menu');
+		return false;
 	});
 	
+	// arrows
+	$('.up').click(function() {
+		$(".main").moveTo(1);
+		return false;
+	});
+	$('.next').click(function() {
+		$(this).fadeOut('fast');
+		$(".main").moveDown();
+		return false;
+	});
+
 	// iframe fix on FF
 	var isFirefox = typeof InstallTrigger !== 'undefined'; 
 	if (isFirefox == true) {
 		$('.title iframe').css('pointer-events', 'none');
 	};
 
-	// ANALYTICS, activate later
-	// $('#logo').on('click', function() {
-	// 	ga('send', 'event', '#logo', 'click');
-	// });
+	// analytics
+	$('#logo').on('click', function() {
+		ga('send', 'event', '#logo', 'click');
+	});
 	
 });

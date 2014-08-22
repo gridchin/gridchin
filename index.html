@@ -33,7 +33,8 @@
     <meta name="google-site-verification" content="aKvxZjsxzEuUO8cobK1mBEO9uEEEw5wTKikz38riVoA" />
 	
 	<!-- Styles -->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="styles/bootstrap.min.css" rel="stylesheet">
+	<link href="styles/bootstrap-theme.min.css" rel="stylesheet">
     <link href="styles/onepage-scroll.css" rel="stylesheet" />
 	<link href="styles/style.css" rel="stylesheet" />
 
@@ -71,9 +72,10 @@
 		    	<h1>Denis Fernandez Gridchin</h1>
 		    	<p>creative coder</p>
 		    </header>
+	    	<a class="next" href="">Scroll down please</a>
 	    </section>
 
-	    <section id="about" class="title about">
+	    <section class="title about">
 	    	<h1>
 	    		<a href="">About</a>
 	    	</h1>
@@ -86,8 +88,8 @@
 		    		<div class="row">
 			    		<article class="col-sm-4 col-sm-offset-2">
 			    			<h2>Hi! I'm Denis</h2>
-			            	<p>I'm a minimalist front-end designer &amp; developer, aka creative coder. I make meaningful experiences. Using digital technologies to make them alive is my speciality. I enjoy creating impact.</p>
-			            	<p>I live in Barcelona and <span class="line-through">work</span> have fun at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a> if you wish. I'm Cuban and speak Spanish, English and Russian. I also love playing my electric and bass guitars.</p>
+			            	<p>I'm a minimalist front-end designer &amp; developer, aka creative coder. I create meaningful experiences. Using digital technologies to make them alive is my speciality. I enjoy making impact.</p>
+			            	<p>I live in Barcelona and <span class="line-through">work</span> have fun at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>. In my spare time I do <a id="experiments-anchor" href="">experiments</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a> if you wish. I'm Cuban and speak Spanish, English and Russian. I also love playing my electric and bass guitars.</p>
 			    		</article>
 			    		<article class="col-sm-6">
 			    			<h2>Mentions</h2>
@@ -120,14 +122,14 @@
 			                    	<a href="http://www.cssdesignawards.com/sites/denis-fernandez-gridchin/3150/" target="_blank">CSS Design Awards</a>
 			                    </li>
 			                    <li>
+			                        <a href="http://den.girnyk.com/" target="_blank">Web Developer Entries</a>
+			                    </li>
+			                    <li>
 			                    	<a href="http://onepagelove.com/denis-fernandez-gridchin/" target="_blank">One Page Love</a>
 			                    </li>
 			                    <li>
 			                    	<a href="http://www.awwwards.com/best-websites/elisava-escola-superior-de-disseny" target="_blank">Awwwards Elisava</a>
 			                    </li>
-			                    <!-- <li>
-			                        <a href="http://den.girnyk.com/" target="_blank">Web Developer Entries</a>
-			                    </li> -->
 				            </ul>
 			    		</article>
 			    	</div><!-- /row -->
@@ -135,7 +137,7 @@
 	    	</div><!-- /cell -->
 	    </section>
 	    
-	    <section id="work" class="title">
+	    <section class="title">
 	    	<h1 class="work">
 	    		<a href="">Work</a>
 	    	</h1>
@@ -324,7 +326,7 @@
 	    	</article>
 	    </section>
 	    
-	    <section id="experiments" class="title">
+	    <section class="title">
 	    	<h1>
 	    		<a href="">Experiments</a>
 	    	</h1>
@@ -383,7 +385,7 @@
 	    	</div><!-- /cell -->
 	    </section>
 
-	    <section id="connect" class="title">
+	    <section class="title">
 	    	<h1>
 	    		<a href="">Connect</a>
 	    	</h1>
@@ -444,36 +446,35 @@
 			    	</div><!-- /row -->
 		    	</div><!-- /container -->
 	    	</div><!-- /cell -->
+	    	<a class="up" href="">Go home</a>
 	    </section>
 	    
 	</div><!-- /main -->
 
-	<a class="menu" href="" data-toggle="modal" data-target="#modal">Toogle menu</a>
+	<a class="menu" id="menu" href="">
+		<span>Toogle menu</span>
+	</a>
 
-	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-	    <!-- <button type="button" class="close" data-dismiss="modal">
-	    	<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-	    </button> -->
+	<div class="modal display" id="modal">
 		<nav>
 			<ul>
 				<li>
-					<a href="#about">About</a>
+					<a id="about" href="">About</a>
 				</li>
 				<li>
-					<a href="#work">Work</a>
+					<a id="work" href="">Work</a>
 				</li>
 				<li>
-					<a href="#experiments">Experiments</a>
+					<a id="experiments" href="">Experiments</a>
 				</li>
 				<li>
-					<a href="#connect">Connect</a>
+					<a id="connect" href="">Connect</a>
 				</li>
 			</ul>
 		</nav>
 	</div>
   	
   	<!-- Scripts -->
-  	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="js/jquery.onepage-scroll.min.js"></script>
 	<script src="js/three.min.js"></script>
 	<script src="js/script.js"></script>
