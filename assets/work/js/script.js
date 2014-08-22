@@ -17,7 +17,6 @@ $(function(){
 		ctx.beginPath();
 		ctx.rect(-arc.size/2, -arc.size/2, arc.size, arc.size);
 		ctx.strokeStyle = 'rgba(0,0,0, 0.2)';
-		// ctx.lineWidth = arc.size/100;
 		ctx.stroke();
 		arc.angle += 20;
 		arc.size *= 1.2;

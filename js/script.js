@@ -38,12 +38,12 @@ $(document).ready(function() {
 		$(".main").moveTo(2);
 		return false;
 	});
-	$('#work').click(function() {
+	$('#experiments, #experiments-anchor').click(function() {
 		$(".main").moveTo(4);
 		return false;
 	});
-	$('#experiments, #experiments-anchor').click(function() {
-		$(".main").moveTo(16);
+	$('#work').click(function() {
+		$(".main").moveTo(6);
 		return false;
 	});
 	$('#connect').click(function() {
