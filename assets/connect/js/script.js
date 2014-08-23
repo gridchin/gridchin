@@ -1,4 +1,8 @@
-/********* PLUGIN *********/
+/**
+ * @author http://letters-inc.jp/
+ */
+
+ /********* PLUGIN *********/
 
 /*! Backstretch - v2.0.4 - 2013-06-19
 * http://srobbin.com/jquery-plugins/backstretch/

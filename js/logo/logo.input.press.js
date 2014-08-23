@@ -1,4 +1,8 @@
-gridchinLogo.input.press = (function( window ) {
+/**
+ * @author Hakim El Hattab - http://hakim.se/
+ */
+
+ gridchinLogo.input.press = (function( window ) {
 	
 	var document = window.document;
 	
