@@ -1,4 +1,8 @@
-showLogo('#logo img', 'logo', 'logo-canvas', 350, 250, 1, .38, .21);
+/**
+ * @author Hakim El Hattab - http://hakim.se/
+ */
+
+ showLogo('#logo img', 'logo', 'logo-canvas', 350, 250, 1, .38, .21);
 
 function showLogo(logoImg, containerID, logoCanvasID,
     width, height, wordScale,

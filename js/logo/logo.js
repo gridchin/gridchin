@@ -1,6 +1,8 @@
-// Logo cool effect is made by the greatest Hakim El Hattab - http://hakim.se/ 
+/**
+ * @author Hakim El Hattab - http://hakim.se/
+ */
 
-var gridchinLogo = (function (window) {
+ var gridchinLogo = (function (window) {
     var INTRO_STATE = 0;
     var MORPH_STATE = 1;
     var OUTRO_STATE = 2;

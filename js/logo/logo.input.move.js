@@ -1,4 +1,8 @@
-gridchinLogo.input.move = (function( window ) {
+/**
+ * @author Hakim El Hattab - http://hakim.se/
+ */
+
+ gridchinLogo.input.move = (function( window ) {
 	
 	var document = window.document;
 	
