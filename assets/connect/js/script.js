@@ -15,36 +15,14 @@
 function setsize(){
 	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 		WH      = $(window).innerHeight() + 70;
-		$('#infinner').backstretch("http://rinn.co.jp/common/img/rmask.jpg");
 	}else{
-		$('#inf').backstretch("http://rinn.co.jp/common/img/miru.jpg");
-		$('#infinner').backstretch("http://rinn.co.jp/common/img/rmask.jpg");
 		WH      = $(window).height();
 	}
 	BDH      = $('#wrap').height();
 	WH50    = $(window).height()/2;
 	WW      = $(window).width();	
 	NVH = $('#globalnav').find('#bd').height();
-	$('#map').css({'height':WH50});
-	$('.box').css({'height':WH});
-	$('.box').last().css({'height':WH + 100});
-
 }
-
-
-$(window).bind('load resize',function(){
-	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-	}else{
-		setsize();
-	}
-});
-
-$(window).bind('load',function(){
-	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-		setsize();
-	}
-	setTimeout("scrollTo(0,1)", 100);
-});
 
 $(window).bind('scroll',function(){
 	WT = $(window).scrollTop();
@@ -66,8 +44,6 @@ $(window).bind('load',function(){
 
 $(function(){
 	setsize();
-	// scroller();
-	// togglesp();
 	$('.snstb').hover(function(){
 		$(this).stop().animate({'margin-left':-110},200)
 	},function(){

@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+	// show iframes only on desktop
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+	}else{
+		$('#about').append('<iframe src="assets/about/"></iframe>');
+		$('#work').append('<iframe src="assets/work/"></iframe>');
+		$('#experiments').append('<iframe src="assets/experiments/"></iframe>');
+		$('#connect').append('<iframe src="assets/connect/"></iframe>');
+	}
+
 	// show content
 	// setTimeout(function() {
 	$('.main').fadeIn(2000).removeClass('display');
@@ -7,7 +16,7 @@ $(document).ready(function() {
 	
 	// scroll effect
 	$('.main').onepage_scroll({
-		sectionContainer: "section",
+		sectionContainer: 'section',
 		responsiveFallback: 600,
 		pagination: false,
 		loop: false,
@@ -24,7 +33,7 @@ $(document).ready(function() {
 
 	// keep scrolling
 	$('.title a').click(function(){
-		$(".main").moveDown();
+		$('.main').moveDown();
 		return false;
 	})
 
@@ -38,20 +47,20 @@ $(document).ready(function() {
 		$('#modal').fadeOut();
 		return false;
 	});
-	$('#about').click(function() {
-		$(".main").moveTo(2);
+	$('.js-about').click(function() {
+		$('.main').moveTo(2);
 		return false;
 	});
-	$('#experiments, #experiments-anchor').click(function() {
-		$(".main").moveTo(4);
+	$('.js-work').click(function() {
+		$('.main').moveTo(4);
 		return false;
 	});
-	$('#work').click(function() {
-		$(".main").moveTo(6);
+	$('.js-experiments').click(function() {
+		$('.main').moveTo(6);
 		return false;
 	});
-	$('#connect').click(function() {
-		$(".main").moveTo(18);
+	$('.js-connect').click(function() {
+		$('.main').moveTo(8);
 		return false;
 	});
 	$('#modal a').click(function() {
@@ -62,13 +71,22 @@ $(document).ready(function() {
 	
 	// arrows
 	$('.up').click(function() {
-		$(".main").moveTo(1);
+		$('.main').moveTo(1);
 		return false;
 	});
 	$('.next').click(function() {
 		$(this).fadeOut('fast');
-		$(".main").moveDown();
+		$('.main').moveDown();
 		return false;
+	});
+
+	// projects
+	$('.work a').mouseover(function() {
+		var project = $(this).attr('class');
+		$('li.visible').removeClass('visible');
+		$('li.' + project).addClass('visible');
+	}).mouseout(function() {
+		$('li.visible').removeClass('visible');
 	});
 
 	// iframe fix on FF
