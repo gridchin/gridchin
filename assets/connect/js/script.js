@@ -66,8 +66,8 @@ $(window).bind('load',function(){
 
 $(function(){
 	setsize();
-	scroller();
-	togglesp();
+	// scroller();
+	// togglesp();
 	$('.snstb').hover(function(){
 		$(this).stop().animate({'margin-left':-110},200)
 	},function(){

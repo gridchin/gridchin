@@ -16,6 +16,10 @@ $(document).ready(function() {
 		beforeMove: function(index) {
 	    	$('.next').fadeOut('fast');
 	    }
+	    // ,
+	    // afterMove: function(3_index) {
+	    //   alert('hi');
+	    // }
 	});
 
 	// keep scrolling
