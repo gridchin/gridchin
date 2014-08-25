@@ -37,7 +37,7 @@ function showLogo(logoImg, containerID, logoCanvasID,
 
         shapeQuality: 9,
 
-        wordImageURL: "http://gridchin.com/images/logo.svg",
+        wordImageURL: "http://gridchin.com/assets/logo.svg",
         containerID: containerID,
         logoCanvasID: logoCanvasID,
         shadowCanvasID: "null",
