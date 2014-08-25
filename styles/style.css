@@ -72,7 +72,7 @@
 		font: normal 2em/1.6 'adobe-garamond-pro',serif;
 		margin-bottom: 20px;	
 	}
-  
+
 /* @end */
 
 
@@ -91,6 +91,10 @@
 	
 	.inherit{
 		position: inherit;
+	}
+
+	.opacity{
+		opacity: 0;
 	}
 
 /* @end */
@@ -124,6 +128,10 @@
 
 	@media (max-width: 767px) {
 
+		body, html{
+			overflow-y: scroll;
+		}
+
 		section{
 			position: relative !important;
 			top: auto !important;
@@ -131,6 +139,7 @@
 			height: auto;
 		}
 
+		.main,
 		.onepage-wrapper{
 			height: auto;
 			margin-bottom: 30px;
@@ -192,13 +201,14 @@
 	.title iframe{
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 100%;
+		left: -2%;
+		width: 104%;
 		height: 100%;
 		margin: 0;
 		z-index: 0;
 		border: none;
 		overflow: hidden;
+		display: none;
 	}
 
 	.title a:hover{
@@ -208,18 +218,6 @@
 
 	.title-work{
 		padding-left: 12px;
-	}
-
-	@media (max-width: 767px) {
-
-		.title h1{
-			display: none;
-		}
-
-		.title iframe{
-			display: none;
-		}
-
 	}
 		
 /* @end */
@@ -308,22 +306,9 @@
 		z-index: 2;
 	}
 
-	/*.modal::before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: transparent url("../assets/bg.svg") no-repeat center;
-		background-size: cover;
-		opacity: .5;
-	}*/
-
 	.modal nav{
 		text-align: center;
 		position: relative;
-		/*right: auto;*/
 		top: 50%;
 		height: 60%;
 		-webkit-transform: translateY(-50%);
@@ -403,7 +388,7 @@
 	
 	#logo-canvas,
 	#shadow-canvas{
-		display: none
+		display: none;
 	}
 		
 	.logo{
@@ -429,22 +414,19 @@
 	.logo canvas{
 		margin: 0 auto;
 	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : portrait) { 
+
+		#logo-canvas,
+		#shadow-canvas{
+			width: 300px;
+		}
+
+	}
 	
-/* @end */
-
-
-/* @group ABOUT */
-
-	.about{
-		background: transparent url("../assets/bg.svg") no-repeat center;
-		background-size: cover; 
-	}
-
-	.about a,
-	.about a:hover{
-		color: #fff;
-	}
-
 /* @end */
 
 

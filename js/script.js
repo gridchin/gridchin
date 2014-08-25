@@ -1,35 +1,36 @@
+try{Typekit.load({
+	// this function will be called after the fonts have loaded and rendered
+	active: function() {
+		$('.main').animate({opacity: 1}, 4000);
+	}
+});}catch(e){}
+
 $(document).ready(function() {
 
 	// show iframes only on desktop
-	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 	}else{
-		$('#about').append('<iframe src="assets/about/"></iframe>');
-		$('#work').append('<iframe src="assets/work/"></iframe>');
-		$('#experiments').append('<iframe src="assets/experiments/"></iframe>');
-		$('#connect').append('<iframe src="assets/connect/"></iframe>');
+		// scroll effect
+		$('.main').onepage_scroll({
+			sectionContainer: 'section',
+			responsiveFallback: 600,
+			pagination: false,
+			loop: false,
+			updateUrl: true,
+			responsiveFallback: 600,
+			beforeMove: function(index) {
+		    	$('.next').fadeOut('fast');
+		    },
+			afterMove: function (index) {				
+				var title = $('.title.active').attr('id');
+				if ($('#' + title).hasClass('active')) {
+					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/').fadeIn(2000);
+			    } else {
+			        $('.title iframe').attr('src', '').hide();
+			    }			    
+			}
+		});
 	}
-
-	// show content
-	// setTimeout(function() {
-	$('.main').fadeIn(2000).removeClass('display');
-	// },1000);
-	
-	// scroll effect
-	$('.main').onepage_scroll({
-		sectionContainer: 'section',
-		responsiveFallback: 600,
-		pagination: false,
-		loop: false,
-		updateUrl: true,
-		responsiveFallback: 600,
-		beforeMove: function(index) {
-	    	$('.next').fadeOut('fast');
-	    }
-	    // ,
-	    // afterMove: function(3_index) {
-	    //   alert('hi');
-	    // }
-	});
 
 	// keep scrolling
 	$('.title a').click(function(){
