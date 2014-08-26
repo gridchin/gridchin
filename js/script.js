@@ -1,11 +1,11 @@
-try{Typekit.load({
-	// this function will be called after the fonts have loaded and rendered
-	active: function() {
-		$('.main').animate({opacity: 1}, 3000);
-	}
-});}catch(e){}
-
 $(document).ready(function() {
+	
+	try{Typekit.load({
+		// this function will be called after the fonts have loaded and rendered
+		active: function() {
+			$('.main').animate({opacity: 1}, 3000);
+		}
+	});}catch(e){}
 
 	// show iframes only on desktop
 	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
@@ -33,7 +33,7 @@ $(document).ready(function() {
 	}
 
 	// keep scrolling
-	$('.title a').click(function(){
+	$('.title h1').click(function(){
 		$('.main').moveDown();
 		return false;
 	})

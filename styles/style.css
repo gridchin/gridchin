@@ -185,19 +185,6 @@
 
 /* @group TITLES */
 
-	.title h1{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin: -23px 0 0 -200px;
-		width: 400px;
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		vertical-align: middle;
-		z-index: 1;
-	}
-
 	.title iframe{
 		position: absolute;
 		top: 0;
@@ -210,9 +197,18 @@
 		overflow: hidden;
 	}
 
-	.title a:hover{
-		color: #333;
-		opacity: .3;
+	.title h1{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -23px 0 0 -200px;
+		width: 400px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		vertical-align: middle;
+		z-index: 1;
+		cursor: pointer;
 	}
 
 	.title-work{
