@@ -1,7 +1,7 @@
 try{Typekit.load({
 	// this function will be called after the fonts have loaded and rendered
 	active: function() {
-		$('.main').animate({opacity: 1}, 4000);
+		$('.main').animate({opacity: 1}, 3000);
 	}
 });}catch(e){}
 
@@ -24,9 +24,9 @@ $(document).ready(function() {
 			afterMove: function (index) {				
 				var title = $('.title.active').attr('id');
 				if ($('#' + title).hasClass('active')) {
-					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/').fadeIn(2000);
+					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
 			    } else {
-			        $('.title iframe').attr('src', '').hide();
+			        $('.title iframe').attr('src', '');
 			    }			    
 			}
 		});

@@ -208,7 +208,6 @@
 		z-index: 0;
 		border: none;
 		overflow: hidden;
-		display: none;
 	}
 
 	.title a:hover{

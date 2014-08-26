@@ -44,4 +44,8 @@
 	
 	var interval = setInterval( redraw, 35 );
 
+	setTimeout(function() {
+	    $('body').addClass('loaded');
+	}, 300);
+
 });

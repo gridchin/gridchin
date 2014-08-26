@@ -144,3 +144,7 @@ function spring(na, nb) {
 $(window).bind('load',function(){
 	nodes_init();
 });
+
+setTimeout(function() {
+    $('body').addClass('loaded');
+}, 300);

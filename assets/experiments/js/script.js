@@ -147,3 +147,9 @@ function render() {
     renderer.render( scene, camera );
 
 }
+
+setTimeout(function() {
+
+    $('body').addClass('loaded');
+
+}, 300);
