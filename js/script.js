@@ -1,30 +1,40 @@
+try{Typekit.load({
+	// this function will be called after the fonts have loaded and rendered
+	active: function() {
+		$('.main').animate({opacity: 1}, 3000);
+	}
+});}catch(e){}
+
 $(document).ready(function() {
 
-	// show content
-	// setTimeout(function() {
-	$('.main').fadeIn(2000).removeClass('display');
-	// },1000);
-	
-	// scroll effect
-	$('.main').onepage_scroll({
-		sectionContainer: "section",
-		responsiveFallback: 600,
-		pagination: false,
-		loop: false,
-		updateUrl: true,
-		responsiveFallback: 600,
-		beforeMove: function(index) {
-	    	$('.next').fadeOut('fast');
-	    }
-	    // ,
-	    // afterMove: function(3_index) {
-	    //   alert('hi');
-	    // }
-	});
+	// show iframes only on desktop
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+	}else{
+		// scroll effect
+		$('.main').onepage_scroll({
+			sectionContainer: 'section',
+			responsiveFallback: 600,
+			pagination: false,
+			loop: false,
+			updateUrl: true,
+			responsiveFallback: 600,
+			beforeMove: function(index) {
+		    	$('.next').fadeOut('fast');
+		    },
+			afterMove: function (index) {				
+				var title = $('.title.active').attr('id');
+				if ($('#' + title).hasClass('active')) {
+					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+			    } else {
+			        $('.title iframe').attr('src', '');
+			    }			    
+			}
+		});
+	}
 
 	// keep scrolling
 	$('.title a').click(function(){
-		$(".main").moveDown();
+		$('.main').moveDown();
 		return false;
 	})
 
@@ -38,20 +48,20 @@ $(document).ready(function() {
 		$('#modal').fadeOut();
 		return false;
 	});
-	$('#about').click(function() {
-		$(".main").moveTo(2);
+	$('.js-about').click(function() {
+		$('.main').moveTo(2);
 		return false;
 	});
-	$('#experiments, #experiments-anchor').click(function() {
-		$(".main").moveTo(4);
+	$('.js-work').click(function() {
+		$('.main').moveTo(4);
 		return false;
 	});
-	$('#work').click(function() {
-		$(".main").moveTo(6);
+	$('.js-experiments').click(function() {
+		$('.main').moveTo(6);
 		return false;
 	});
-	$('#connect').click(function() {
-		$(".main").moveTo(18);
+	$('.js-connect').click(function() {
+		$('.main').moveTo(8);
 		return false;
 	});
 	$('#modal a').click(function() {
@@ -62,13 +72,22 @@ $(document).ready(function() {
 	
 	// arrows
 	$('.up').click(function() {
-		$(".main").moveTo(1);
+		$('.main').moveTo(1);
 		return false;
 	});
 	$('.next').click(function() {
 		$(this).fadeOut('fast');
-		$(".main").moveDown();
+		$('.main').moveDown();
 		return false;
+	});
+
+	// projects
+	$('.work a').mouseover(function() {
+		var project = $(this).attr('class');
+		$('li.visible').removeClass('visible');
+		$('li.' + project).addClass('visible');
+	}).mouseout(function() {
+		$('li.visible').removeClass('visible');
 	});
 
 	// iframe fix on FF

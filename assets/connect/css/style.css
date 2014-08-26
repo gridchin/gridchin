@@ -7,3 +7,14 @@ body {
 	overflow: hidden;
 	background-color: transparent;
 }
+
+canvas {
+	opacity: 0;
+    -webkit-transition: all 2s;
+       -moz-transition: all 2s;
+    		transition: all 2s;
+}
+
+.loaded canvas {
+    opacity: 1;
+}

@@ -1,83 +1,155 @@
 /**
- * @author http://letters-inc.jp/
+ * @author Ricardo Cabello - http://mrdoob.com/
  */
 
- $(function(){
-	
-	function getBrowser(){var ua = window.navigator.userAgent.toLowerCase(); var ver = window.navigator.appVersion.toLowerCase(); var name = 'unknown'; if (ua.indexOf("msie") != -1){if (ver.indexOf("msie 6.") != -1){name = 'ie ie6'; }else if (ver.indexOf("msie 7.") != -1){name = 'ie ie7'; }else if (ver.indexOf("msie 8.") != -1){name = 'ie ie8'; }else if (ver.indexOf("msie 9.") != -1){name = 'ie ie9'; }else if (ver.indexOf("msie 10.") != -1){name = 'ie ie10'; }else{name = 'ie'; } }else if(ua.indexOf('trident/7') != -1){name = 'ie ie11'; }else if (ua.indexOf('chrome') != -1){name = 'chrome'; }else if (ua.indexOf('safari') != -1){name = 'safari'; }else if (ua.indexOf('opera') != -1){name = 'opera'; }else if (ua.indexOf('firefox') != -1){name = 'firefox'; } return name; };
-	
-	subheadH = 1000;
-	winW = $(window).width();
-	winH = $(window).height();
+var mouseX = 0, mouseY = 0,
 
-	if(getBrowser() == 'chrome'){
-		var STAR = 250;
-	}else{
-		var STAR = 150;
-	}
+windowHalfX = window.innerWidth / 2,
+windowHalfY = window.innerHeight / 2,
 
-	var mouseX = 0, mouseY = 0,
-	windowHalfX = winW / 2,
-	windowHalfY = winH / 2,
-	SEPARATION = 200,AMOUNTX = 5,AMOUNTY = 5,camera, scene, renderer;
+SEPARATION = 200,
+AMOUNTX = 10,
+AMOUNTY = 10,
 
-	about_init();
-	about_animate();
+camera, scene, renderer;
 
-	function about_init() {
-		var container, separation = 100, amountX = 50, amountY = 50,particles, particle;
-		camera = new THREE.PerspectiveCamera( 75, winW / subheadH, 1, 10000 );
-		camera.position.z = 100;
-		scene = new THREE.Scene();
-		renderer = new THREE.CanvasRenderer();
-		renderer.setSize(winW, winH );
-		$('#canvas').html(renderer.domElement);
-		PI2 = Math.PI * 2;
-		material = new THREE.SpriteCanvasMaterial( {
-			color: 0x000000,
-			program: function ( context ) {
-				context.beginPath();
-				// context.arc( 0, 0, 0, 0, PI2, true );
-				context.fill();
-			}
-		});
-		geometry = new THREE.Geometry();
-		for ( var i = 0; i < STAR; i ++ ) {
-			particle = new THREE.Sprite( material );
-			particle.position.x = Math.random() * 2 - 1;
-			particle.position.y = Math.random() * 2 - 1;
-			particle.position.z = Math.random() * 2 - 1;
-			particle.position.normalize();
-			particle.position.multiplyScalar( Math.random() * 10 + 1000 );
-			particle.scale.x = particle.scale.y = 10;
-			scene.add( particle );
-			geometry.vertices.push( particle.position );
-		}
-		var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.1 } ) );
-		scene.add(line);
-		document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-		window.addEventListener( 'resize', onWindowResize, false );
-	}
-	function onWindowResize() {
-		windowHalfX = winW / 2;
-		windowHalfY = subheadH / 2;
-		camera.aspect = winW / subheadH;
-		camera.updateProjectionMatrix();
-		renderer.setSize( winW, subheadH);
-	}
-	function onDocumentMouseMove(event) {
-		mouseX = event.clientX - windowHalfX;
-		mouseY = event.clientY - windowHalfY;
-	}
-	function about_animate() {
-		requestAnimationFrame( about_animate );
-		about_render();
-	}
-	function about_render() {
-		camera.position.x += ( mouseX - camera.position.x ) * .05;
-		camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
-		camera.lookAt( scene.position );
-		renderer.render( scene, camera );
-	}
-	
-});
+init();
+animate();
+
+function init() {
+
+    var container, separation = 100, amountX = 50, amountY = 50,
+    particles, particle;
+
+    container = document.createElement('div');
+    document.body.appendChild(container);
+
+    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.z = 100;
+
+    scene = new THREE.Scene();
+
+    renderer = new THREE.CanvasRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+
+    // particles
+
+    var PI2 = Math.PI * 2;
+    var material = new THREE.SpriteCanvasMaterial( {
+
+        color: 0x000000,
+        program: function ( context ) {
+
+            context.beginPath();
+            context.arc( 0, 0, 0.5, 0, PI2, true );
+            context.fill();
+
+        }
+
+    } );
+
+    var geometry = new THREE.Geometry();
+
+    for ( var i = 0; i < 100; i ++ ) {
+
+        particle = new THREE.Sprite( material );
+        particle.position.x = Math.random() * 2 - 1;
+        particle.position.y = Math.random() * 2 - 1;
+        particle.position.z = Math.random() * 2 - 1;
+        particle.position.normalize();
+        particle.position.multiplyScalar( Math.random() * 10 + 450 );
+        particle.scale.x = particle.scale.y = 10;
+        scene.add( particle );
+
+        geometry.vertices.push( particle.position );
+
+    }
+
+    // lines
+
+    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.1 } ) );
+    scene.add( line );
+
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+    //
+
+    window.addEventListener( 'resize', onWindowResize, false );
+
+}
+
+function onWindowResize() {
+
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+//
+
+function onDocumentMouseMove(event) {
+
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
+
+}
+
+function onDocumentTouchStart( event ) {
+
+    if ( event.touches.length > 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+    }
+
+}
+
+function onDocumentTouchMove( event ) {
+
+    if ( event.touches.length == 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+    }
+
+}
+
+//
+
+function animate() {
+
+    requestAnimationFrame( animate );
+
+    render();
+
+}
+
+function render() {
+
+    camera.position.x += ( mouseX - camera.position.x ) * .05;
+    camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
+    camera.lookAt( scene.position );
+
+    renderer.render( scene, camera );
+
+}
+
+setTimeout(function() {
+
+    $('body').addClass('loaded');
+
+}, 300);

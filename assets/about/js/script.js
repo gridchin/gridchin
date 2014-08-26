@@ -71,4 +71,8 @@
         l.render(e, k);
         g += 0.1
     }
+
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 300);
 });
