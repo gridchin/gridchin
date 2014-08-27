@@ -11,30 +11,37 @@ $(document).ready(function() {
 	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 	}else{
 		// scroll effect
-		$('.main').onepage_scroll({
-			sectionContainer: 'section',
-			responsiveFallback: 600,
-			pagination: false,
-			loop: false,
-			updateUrl: true,
-			responsiveFallback: 600,
-			beforeMove: function(index) {
-		    	$('.next').fadeOut('fast');
-		    },
-			afterMove: function (index) {				
-				var title = $('.title.active').attr('id');
-				if ($('#' + title).hasClass('active')) {
-					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-			    } else {
-			        $('.title iframe').attr('src', '');
-			    }			    
-			}
-		});
+		// $('.main').onepage_scroll({
+		// 	sectionContainer: 'section',
+		// 	responsiveFallback: 600,
+		// 	pagination: false,
+		// 	loop: false,
+		// 	updateUrl: true,
+		// 	responsiveFallback: 600,
+		// 	beforeMove: function(index) {
+		//     	$('.next').fadeOut('fast');
+		//     },
+		// 	afterMove: function (index) {				
+		// 		var title = $('.title.active').attr('id');
+		// 		if ($('#' + title).hasClass('active')) {
+		// 			$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+		// 	    } else {
+		// 	        $('.title iframe').attr('src', '');
+		// 	    }			    
+		// 	}
+		// });
+		
+		$('.main').fullpage({
+   			css3: true,
+   			verticalCentered: false,
+   			resize: false,
+   			continuousVertical: true
+   		});
 	}
 
 	// keep scrolling
 	$('.title h1').click(function(){
-		$('.main').moveDown();
+		$.fn.fullpage.moveSectionDown();
 		return false;
 	})
 
@@ -49,19 +56,19 @@ $(document).ready(function() {
 		return false;
 	});
 	$('.js-about').click(function() {
-		$('.main').moveTo(2);
+		$.fn.fullpage.moveTo(2);
 		return false;
 	});
 	$('.js-work').click(function() {
-		$('.main').moveTo(4);
+		$.fn.fullpage.moveTo(4);
 		return false;
 	});
 	$('.js-experiments').click(function() {
-		$('.main').moveTo(6);
+		$.fn.fullpage.moveTo(6);
 		return false;
 	});
 	$('.js-connect').click(function() {
-		$('.main').moveTo(8);
+		$.fn.fullpage.moveTo(8);
 		return false;
 	});
 	$('#modal a').click(function() {
@@ -71,13 +78,13 @@ $(document).ready(function() {
 	});
 	
 	// arrows
-	$('.up').click(function() {
-		$('.main').moveTo(1);
-		return false;
-	});
+	// $('.up').click(function() {
+	// 	$('.main').moveTo(1);
+	// 	return false;
+	// });
 	$('.next').click(function() {
 		$(this).fadeOut('fast');
-		$('.main').moveDown();
+		$.fn.fullpage.moveSectionDown();
 		return false;
 	});
 
