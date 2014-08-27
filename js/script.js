@@ -11,31 +11,24 @@ $(document).ready(function() {
 	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 	}else{
 		// scroll effect
-		// $('.main').onepage_scroll({
-		// 	sectionContainer: 'section',
-		// 	responsiveFallback: 600,
-		// 	pagination: false,
-		// 	loop: false,
-		// 	updateUrl: true,
-		// 	responsiveFallback: 600,
-		// 	beforeMove: function(index) {
-		//     	$('.next').fadeOut('fast');
-		//     },
-		// 	afterMove: function (index) {				
-		// 		var title = $('.title.active').attr('id');
-		// 		if ($('#' + title).hasClass('active')) {
-		// 			$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-		// 	    } else {
-		// 	        $('.title iframe').attr('src', '');
-		// 	    }			    
-		// 	}
-		// });
-		
 		$('.main').fullpage({
    			css3: true,
    			verticalCentered: false,
    			resize: false,
-   			continuousVertical: true
+   			continuousVertical: true,
+   			onLeave: function(index){
+	            if(index == '1'){
+	                $('.next').fadeOut('fast');
+	            }
+	        },
+   			afterLoad: function(index){
+	            var title = $('.title.active').attr('id');
+				if ($('#' + title).hasClass('active')) {
+					$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+			    } else {
+			        $('.title iframe').attr('src', '');
+			    }
+	        }
    		});
 	}
 
@@ -77,11 +70,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	// arrows
-	// $('.up').click(function() {
-	// 	$('.main').moveTo(1);
-	// 	return false;
-	// });
+	// arrow
 	$('.next').click(function() {
 		$(this).fadeOut('fast');
 		$.fn.fullpage.moveSectionDown();

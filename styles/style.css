@@ -45,9 +45,9 @@
 		color: #333;
 		outline: none;
 		-webkit-transition: all .3s ease-in-out; 
-		-moz-transition: all .3s ease-in-out; 
-		-o-transition: all .3s ease-in-out; 
-		transition: all .3s ease-in-out	
+		   -moz-transition: all .3s ease-in-out; 
+			 -o-transition: all .3s ease-in-out; 
+				transition: all .3s ease-in-out	
 	}
 	 
 	a:hover,
@@ -69,7 +69,7 @@
 	}
 
 	h2{
-		font: normal 2em/1.6 'adobe-garamond-pro',serif;
+		font: normal 2em/1.6 'adobe-garamond-pro',Georgia,serif;
 		margin-bottom: 20px;	
 	}
 
@@ -273,17 +273,23 @@
 	}
 
 	.close::before{
-		transform: rotate(45deg);
 		top: 50%;
 		margin-top: -1px;
 		background-color: #fff;
+		-webkit-transform: rotate(45deg);
+		   -moz-transform: rotate(45deg);
+			 -o-transform: rotate(45deg);
+				transform: rotate(45deg);
 	}
 
 	.close::after{
-		transform: rotate(-45deg);
 		bottom: 50%;
 		margin-bottom: -1px;
 		background-color: #fff;
+		-webkit-transform: rotate(-45deg);
+		   -moz-transform: rotate(-45deg);
+			 -o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
 	}
 
 	.modal{
@@ -308,6 +314,7 @@
 		height: 60%;
 		-webkit-transform: translateY(-50%);
 		   -moz-transform: translateY(-50%);
+			 -o-transform: translateY(-50%);
 				transform: translateY(-50%);
 	}
 
@@ -345,9 +352,8 @@
 /* @end */
 
 
-/* @group ARROWS */
+/* @group ARROW */
 
-	.up,
 	.next{
 		position: absolute;
 		bottom: 30px;
@@ -357,25 +363,14 @@
 		display: block;
 		text-indent: -999em;
 		z-index: 2;
-		background: transparent url('../assets/arrow-up.svg') no-repeat center top;
-	}
-
-	.next{
-		-webkit-transform: rotate(180deg);
-		   -moz-transform: rotate(180deg);
-				transform: rotate(180deg);
-	}
-
-	.up:hover,
-	.next:hover{
-		height: 50px;
+		background: transparent url('../assets/arrow.svg') no-repeat center bottom;
 	}
 
 	.next:hover{
 		bottom: 20px;
+		height: 50px;
 	}
 	
-
 /* @end */
 
 
