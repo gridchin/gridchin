@@ -43,7 +43,8 @@
 	a,
 	a img{
 		color: #333;
-		outline: none;
+		outline: none;		
+		-webkit-tap-highlight-color: transparent;
 		-webkit-transition: all .3s ease-in-out; 
 		   -moz-transition: all .3s ease-in-out; 
 			 -o-transition: all .3s ease-in-out; 
@@ -133,10 +134,10 @@
 		}
 
 		section{
-			position: relative !important;
+			/*position: relative !important;
 			top: auto !important;
 			left: auto !important;
-			height: auto;
+			height: auto !important;*/
 		}
 
 		.main,
@@ -209,6 +210,7 @@
 		vertical-align: middle;
 		z-index: 1;
 		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.title-work{
