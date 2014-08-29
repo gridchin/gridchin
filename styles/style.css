@@ -1,12 +1,3 @@
-/* @group RESETS */
-
-	.typekit-badge{
-		display: none !important;
-	}
-	
-/* @end */
-
-
 /* @group GLOBAL */
 	
 	html,
@@ -43,11 +34,12 @@
 	a,
 	a img{
 		color: #333;
-		outline: none;
+		outline: none;		
+		-webkit-tap-highlight-color: transparent;
 		-webkit-transition: all .3s ease-in-out; 
-		-moz-transition: all .3s ease-in-out; 
-		-o-transition: all .3s ease-in-out; 
-		transition: all .3s ease-in-out	
+		   -moz-transition: all .3s ease-in-out; 
+			 -o-transition: all .3s ease-in-out; 
+				transition: all .3s ease-in-out;	
 	}
 	 
 	a:hover,
@@ -69,14 +61,14 @@
 	}
 
 	h2{
-		font: normal 2em/1.6 'adobe-garamond-pro',serif;
+		font: normal 2em/1.6 'adobe-garamond-pro',Georgia,serif;
 		margin-bottom: 20px;	
 	}
 
 /* @end */
 
 
-/* @group COMPLEMENTS */
+/* @group TOOLS */
 
 	.tr{
 		-webkit-transition: all .3s;
@@ -97,10 +89,14 @@
 		opacity: 0;
 	}
 
+	.typekit-badge{
+		display: none !important;
+	}
+
 /* @end */
 
 
-/* @group LAYOUT */
+/* @group OBJECTS */
 
 	section{
 	    position: relative;
@@ -121,28 +117,19 @@
 		z-index: 1;
 	}
 
-/* @end */
-
-
-/* @group RESET */
-
 	@media (max-width: 767px) {
 
-		body, html{
-			overflow-y: scroll;
+		body{
+			overflow-y: scroll !important; 
 		}
 
 		section{
-			position: relative !important;
-			top: auto !important;
-			left: auto !important;
-			height: auto;
+			height: auto !important;
 		}
 
-		.main,
-		.onepage-wrapper{
-			height: auto;
+		.main{
 			margin-bottom: 30px;
+			height: auto !important;
 		}
 	
 	}
@@ -154,6 +141,10 @@
 
 	.info p{
 		margin-bottom: 25px;
+	}
+
+	.info p:last-child{
+		margin-bottom: 0;
 	}
 
 	.info a{
@@ -183,7 +174,7 @@
 /* @end */
 
 
-/* @group TITLES */
+/* @group TITLE SECTIONS */
 
 	.title iframe{
 		position: absolute;
@@ -209,173 +200,13 @@
 		vertical-align: middle;
 		z-index: 1;
 		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.title-work{
 		padding-left: 12px;
 	}
 		
-/* @end */
-
-
-/* @group MENU */
-
-	.menu,
-	.close{
-		position: fixed;
-		top: 30px;
-		right: 30px;
-		width: 40px;
-		height: 30px;
-		text-indent: -999em;
-		z-index: 3;
-	}
-
-	.menu span{
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		margin-top: -1px;
-		background-color: #333;
-	}
-
-	.close span{
-		opacity: 0;
-	}
-
-	.menu::before,
-	.close::before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: #333;
-	}
-
-	.menu::after,
-	.close::after{
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: #333;
-	}
-
-	.menu:hover{
-		height: 40px;
-		top: 25px;
-	}
-
-	.close::before{
-		transform: rotate(45deg);
-		top: 50%;
-		margin-top: -1px;
-		background-color: #fff;
-	}
-
-	.close::after{
-		transform: rotate(-45deg);
-		bottom: 50%;
-		margin-bottom: -1px;
-		background-color: #fff;
-	}
-
-	.modal{
-		text-align: center;
-	}
-
-	.modal{
-		width: 100%;
-		height: 100%;
-		background: rgba(85,200,115,.9) url("../assets/bg.svg") no-repeat center;
-		background-size: cover;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 2;
-	}
-
-	.modal nav{
-		text-align: center;
-		position: relative;
-		top: 50%;
-		height: 60%;
-		-webkit-transform: translateY(-50%);
-		   -moz-transform: translateY(-50%);
-				transform: translateY(-50%);
-	}
-
-	.modal ul{
-		padding: 0;
-		margin: 0 auto;
-		display: inline-block;
-		height: 100%;
-		position: relative;
-	}
-
-	.modal ul li{
-		display: block;
-		height: 25%;
-		height: calc(100% / 4);
-		min-height: 3em;
-	}
-
-	.modal ul a{
-		font-size: 3em;
-		font-weight: 300;
-		display: block;
-		color: #fff;
-		text-transform: uppercase;
-	}
-
-	.modal ul:hover a{
-		opacity: .5;
-	}
-
-	.modal ul a:hover{
-		opacity: 1;
-	}
-
-/* @end */
-
-
-/* @group ARROWS */
-
-	.up,
-	.next{
-		position: absolute;
-		bottom: 30px;
-		right: 30px;
-		width: 40px;
-		height: 40px;
-		display: block;
-		text-indent: -999em;
-		z-index: 2;
-		background: transparent url('../assets/arrow-up.svg') no-repeat center top;
-	}
-
-	.next{
-		-webkit-transform: rotate(180deg);
-		   -moz-transform: rotate(180deg);
-				transform: rotate(180deg);
-	}
-
-	.up:hover,
-	.next:hover{
-		height: 50px;
-	}
-
-	.next:hover{
-		bottom: 20px;
-	}
-	
-
 /* @end */
 
 
@@ -422,6 +253,145 @@
 
 	}
 	
+/* @end */
+
+
+/* @group MENU & MODAL */
+
+	.menu,
+	.close{
+		position: fixed;
+		top: 30px;
+		right: 30px;
+		width: 40px;
+		height: 30px;
+		text-indent: -999em;
+		z-index: 3;
+	}
+
+	.menu span{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		margin-top: -1px;
+		background-color: #333;
+	}
+
+	.close span{
+		opacity: 0;
+	}
+
+	.menu::before,
+	.close::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #333;
+		-webkit-transition: all .3s ease-in-out; 
+		   -moz-transition: all .3s ease-in-out; 
+			 -o-transition: all .3s ease-in-out; 
+				transition: all .3s ease-in-out;
+	}
+
+	.menu::after,
+	.close::after{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #333;
+		-webkit-transition: all .3s ease-in-out; 
+		   -moz-transition: all .3s ease-in-out; 
+			 -o-transition: all .3s ease-in-out; 
+				transition: all .3s ease-in-out;
+	}
+
+	.menu:hover{
+		height: 40px;
+		top: 25px;
+	}
+
+	.close::before{
+		top: 50%;
+		margin-top: -1px;
+		background-color: #fff;
+		-webkit-transform: rotate(45deg);
+		   -moz-transform: rotate(45deg);
+			 -o-transform: rotate(45deg);
+				transform: rotate(45deg);
+	}
+
+	.close::after{
+		bottom: 50%;
+		margin-bottom: -1px;
+		background-color: #fff;
+		-webkit-transform: rotate(-45deg);
+		   -moz-transform: rotate(-45deg);
+			 -o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+	}
+
+	.modal{
+		width: 100%;
+		height: 100%;
+		background: rgba(85,200,115,.9) url("../assets/bg.svg") no-repeat center;
+		background-size: cover;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		text-align: center;
+	}
+
+	.modal nav{
+		text-align: center;
+		position: relative;
+		top: 50%;
+		height: 60%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+			 -o-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
+
+	.modal ul{
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		height: 100%;
+		position: relative;
+	}
+
+	.modal ul li{
+		display: block;
+		height: 25%;
+		height: calc(100% / 4);
+		min-height: 3em;
+	}
+
+	.modal ul a{
+		font-size: 3em;
+		font-weight: 300;
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	.modal ul:hover a{
+		opacity: .5;
+	}
+
+	.modal ul a:hover{
+		opacity: 1;
+	}
+
 /* @end */
 
 
@@ -514,6 +484,28 @@
 		background-image: url('../assets/projects/statoil.jpg');
 	}
 
+/* @end */
+
+
+/* @group ARROW */
+
+	.next{
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+		display: block;
+		text-indent: -999em;
+		z-index: 2;
+		background: transparent url('../assets/arrow.svg') no-repeat center bottom;
+	}
+
+	.next:hover{
+		bottom: 20px;
+		height: 50px;
+	}
+	
 /* @end */
 
 
