@@ -1,8 +1,8 @@
 /**
  * @author http://letters-inc.jp/
  */
+var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
- $(function() {
     subheadH = $(window).height();
     winW = $(window).width();
     var d = 100,
@@ -59,6 +59,11 @@
         b()
     }
 
+    var myReq = requestAnimationFrame(c);
+    function stop() { 
+    	window.cancelAnimationFrame(myReq);
+    }
+
     function b() {
         k.lookAt(e.position);
         var r = 0;
@@ -75,4 +80,3 @@
     setTimeout(function() {
         $('body').addClass('loaded');
     }, 0);
-});

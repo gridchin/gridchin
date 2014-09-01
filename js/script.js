@@ -24,12 +24,19 @@ $(document).ready(function() {
 		            }
 		        },
 	   			afterLoad: function(index){
-		            var title = $('.title.active').attr('id');
-					if ($('#' + title).hasClass('active')) {
-						$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-				    } else {
-				        $('.title iframe').attr('src', '');
-				    }
+	   				var title = $('.title.active').attr('id');
+	   				var iframe = $('.title.active').find(iframe).attr('id');
+	   				if ($('#' + title).hasClass('active')) {
+	   				// 	document.getElementById('about-iframe').contentWindow.c();
+	   				// } else {
+	   					document.getElementById('about-iframe').contentWindow.stop();
+	   				}
+		   //          var title = $('.title.active').attr('id');
+					// if ($('#' + title).hasClass('active')) {
+					// 	$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+				 //    } else {
+				 //        $('.title iframe').attr('src', '');
+				 //    }
 		        }
 	   		});
 	    });
