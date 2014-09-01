@@ -74,5 +74,5 @@
 
     setTimeout(function() {
         $('body').addClass('loaded');
-    }, 0);
+    }, 1);
 });
