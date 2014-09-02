@@ -14,7 +14,7 @@ AMOUNTY = 10,
 camera, scene, renderer;
 
 init();
-animate();
+//animate();
 
 function init() {
 
@@ -130,12 +130,17 @@ function onDocumentTouchMove( event ) {
 
 //
 
-function animate() {
+function start() {
 
-    requestAnimationFrame( animate );
+    requestAnimationFrame( start );
 
     render();
 
+}
+
+var myReq = requestAnimationFrame(start);
+function stop() { 
+    window.cancelAnimationFrame(myReq);
 }
 
 function render() {

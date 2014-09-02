@@ -25,12 +25,16 @@ $(document).ready(function() {
 		        },
 	   			afterLoad: function(index){
 	   				var title = $('.title.active').attr('id');
-	   				var iframe = $('.title.active').find(iframe).attr('id');
+	   				var iframeID = title + '-iframe';
 	   				if ($('#' + title).hasClass('active')) {
-	   				// 	document.getElementById('about-iframe').contentWindow.c();
-	   				// } else {
-	   					document.getElementById('about-iframe').contentWindow.stop();
-	   				}
+	   					document.getElementById(iframeID).contentWindow.start();
+	   					console.log(title);
+	   				} //else {
+	   					// $('#about-iframe, #work-iframe, #experiments-iframe').contentWindow.stop();
+	   					//document.getElementById('about-iframe').contentWindow.stop();
+	   					// document.getElementById('work-iframe').contentWindow.stop();
+	   					// document.getElementById('experiments-iframe').contentWindow.stop();
+	   				//}
 		   //          var title = $('.title.active').attr('id');
 					// if ($('#' + title).hasClass('active')) {
 					// 	$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');

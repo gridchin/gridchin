@@ -50,7 +50,7 @@ $(function(){
 });
 
 
-var looper;
+// var looper;
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 
@@ -60,10 +60,11 @@ var minDist = 80;
 var springAmount = 0.0002;
 var rgb = '0,0,0';
 
-function nodes_init() {
+function start() {
+	requestAnimationFrame(start);
     createNodes();
 	context.lineWidth = 1.5;
-	looper = setInterval(nodes_loop, 1000/31);
+	//looper = setInterval(nodes_loop, 1000/31);
 }
 
 function createNodes() {
@@ -139,9 +140,10 @@ function spring(na, nb) {
 	}
 }
 
-$(window).bind('load',function(){
-	nodes_init();
-});
+// $(window).bind('load',function(){
+	requestAnimationFrame(start);
+// });
+
 
 setTimeout(function() {
     $('body').addClass('loaded');
