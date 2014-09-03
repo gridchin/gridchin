@@ -11,7 +11,7 @@ var a, f;
 var k, e, l;
 var o, h, g = 0;
 n();
-//start();
+//c();
 
 function n() {
     k = new THREE.PerspectiveCamera(75, winW / subheadH, 1, 10000);
@@ -53,12 +53,15 @@ function m() {
     l.setSize(winW, subheadH)
 }
 
-function start() {
-    requestAnimationFrame(start);
+function c() {
+    requestAnimationFrame(c);
     b()
 }
 
-var myReq = requestAnimationFrame(start);
+var myReq = requestAnimationFrame(c);
+function start() { 
+	myReq = requestAnimationFrame(c);
+}
 function stop() { 
 	window.cancelAnimationFrame(myReq);
 }

@@ -25,8 +25,8 @@ draw = function(){
 	ctx.restore();      
 }
 
-function start() {
-	requestAnimationFrame(start);
+function c() {
+	requestAnimationFrame(c);
 	arc = {
 		x: cw/2,
 		y: ch/2,
@@ -41,9 +41,12 @@ function start() {
 	baseArcRotation -= 0.2;
 }
 
-var myReq = requestAnimationFrame(start);
+var myReq = requestAnimationFrame(c);
+function start() { 
+	myReq = requestAnimationFrame(c);
+}
 function stop() { 
-	window.cancelAnimationFrame(myReq);
+	cancelAnimationFrame(myReq);
 }
 
 //requestAnimationFrame(start);
