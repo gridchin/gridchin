@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-	if( mobile == false || window.innerWidth > 767 ) {
+	if( mobile == false ) {
 	   
 		// load fullpage
 	    $.getScript( "js/jquery.fullPage.min.js", function() {

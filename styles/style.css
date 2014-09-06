@@ -117,10 +117,11 @@
 		z-index: 1;
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: 767px) { /* Mainly resets to disable the scroll plugin */
 
 		body{
-			overflow-y: scroll !important; 
+			overflow: visible !important; 
+			overflow-y: scroll !important;
 		}
 
 		section{
@@ -130,6 +131,9 @@
 		.main{
 			margin-bottom: 30px;
 			height: auto !important;
+			-webkit-transform: none !important;
+			   -moz-transform: none !important;
+					transform: none !important;
 		}
 	
 	}
@@ -284,7 +288,9 @@
 	}
 
 	.menu::before,
-	.close::before{
+	.menu::after,
+	.close::before,
+	.close::after{
 		content: "";
 		position: absolute;
 		top: 0;
@@ -300,17 +306,8 @@
 
 	.menu::after,
 	.close::after{
-		content: "";
-		position: absolute;
+		top: auto;
 		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: #333;
-		-webkit-transition: all .3s ease-in-out; 
-		   -moz-transition: all .3s ease-in-out; 
-			 -o-transition: all .3s ease-in-out; 
-				transition: all .3s ease-in-out;
 	}
 
 	.menu:hover{
@@ -413,6 +410,8 @@
 		height: 100%;
 		background: transparent no-repeat center;
 		opacity: 0;
+		display: block;
+		text-indent: -100%;
 		-webkit-transition: all .2s;
 		   -moz-transition: all .2s;
 			 -o-transition: all .2s;
