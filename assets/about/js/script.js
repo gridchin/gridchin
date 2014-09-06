@@ -32,7 +32,7 @@ function init() {
     var PI2 = Math.PI * 2;
     var material = new THREE.SpriteCanvasMaterial( {
 
-        color: 0x000000,
+        color: 0xcccccc,
         program: function ( context ) {
 
             context.beginPath();
