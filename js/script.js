@@ -3,7 +3,7 @@ $(document).ready(function() {
 	try{Typekit.load({
 		// show content after the fonts have been loaded and rendered
 		active: function() {
-			$('.main').animate({opacity: 1}, 3000);
+			$('.main, .menu').animate({opacity: 1}, 3000);
 		}
 	});}catch(e){}
 
