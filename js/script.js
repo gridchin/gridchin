@@ -55,11 +55,11 @@ $(document).ready(function() {
 			$.fn.fullpage.moveTo(2);
 			return false;
 		});
-		$('.js-work').click(function() {
+		$('.js-experiments').click(function() {
 			$.fn.fullpage.moveTo(4);
 			return false;
 		});
-		$('.js-experiments').click(function() {
+		$('.js-work').click(function() {
 			$.fn.fullpage.moveTo(6);
 			return false;
 		});
