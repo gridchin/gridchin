@@ -14,7 +14,7 @@ AMOUNTY = 10,
 camera, scene, renderer;
 
 init();
-//animate();
+animate();
 
 function init() {
 
@@ -130,17 +130,12 @@ function onDocumentTouchMove( event ) {
 
 //
 
-function start() {
+function animate() {
 
-    requestAnimationFrame( start );
+    requestAnimationFrame( animate );
 
     render();
 
-}
-
-var myReq = requestAnimationFrame(start);
-function stop() { 
-    window.cancelAnimationFrame(myReq);
 }
 
 function render() {
@@ -155,6 +150,6 @@ function render() {
 
 setTimeout(function() {
 
-    $('body').addClass('loaded');
+    document.body.className = "loaded";
 
 }, 0);

@@ -1,84 +1,165 @@
 /**
- * @author http://letters-inc.jp/
+ * @author Ricardo Cabello - http://mrdoob.com/
  */
 
-subheadH = $(window).height();
-winW = $(window).width();
-var d = 100,
-    j = 50,
-    i = 50;
-var a, f;
-var k, e, l;
-var o, h, g = 0;
-n();
-//c();
+var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
 
-function n() {
-    k = new THREE.PerspectiveCamera(75, winW / subheadH, 1, 10000);
-    k.position.z = 1000;
-    k.position.y = 0;
-    e = new THREE.Scene();
-    o = new Array();
-    var t = Math.PI * 2;
-    var s = new THREE.SpriteCanvasMaterial({
-        color: 16777215,
-        program: function(u) {
-            u.beginPath();
-            u.strokeStyle = "rgba(0, 0, 0, 0.4)";
-            u.lineTo(0, 0);
-            u.lineTo(10, 0);
-            u.stroke()
+var container;
+var camera, scene, renderer;
+
+var particles, particle, count = 0;
+
+var mouseX = 0, mouseY = 0;
+
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+init();
+animate();
+
+function init() {
+
+    container = document.createElement( 'div' );
+    document.body.appendChild( container );
+
+    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.z = 1000;
+
+    scene = new THREE.Scene();
+
+    particles = new Array();
+
+    var PI2 = Math.PI * 2;
+    var material = new THREE.SpriteCanvasMaterial( {
+
+        color: 0xcccccc,
+        program: function ( context ) {
+
+            context.beginPath();
+            context.arc( 0, 0, 0.5, 0, PI2, true );
+            context.fill();
+
         }
-    });
-    var r = 0;
-    for (var q = 0; q < j; q++) {
-        for (var p = 0; p < i; p++) {
-            h = o[r++] = new THREE.Sprite(s);
-            h.position.x = q * d - ((j * d) / 2);
-            h.position.z = p * d - ((i * d) / 2);
-            e.add(h)
+
+    } );
+
+    var i = 0;
+
+    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+            particle = particles[ i ++ ] = new THREE.Sprite( material );
+            particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
+            particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
+            scene.add( particle );
+
         }
+
     }
-    l = new THREE.CanvasRenderer();
-    l.setSize(winW, subheadH);
-    $("#canvas").html(l.domElement);
-    window.addEventListener("resize", m, false)
+
+    renderer = new THREE.CanvasRenderer();
+    renderer.setClearColor( 0x000000 );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+    //
+
+    window.addEventListener( 'resize', onWindowResize, false );
+
 }
 
-function m() {
-    windowHalfX = winW / 2;
-    windowHalfY = subheadH / 2;
-    k.aspect = winW / subheadH;
-    k.updateProjectionMatrix();
-    l.setSize(winW, subheadH)
+function onWindowResize() {
+
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
 }
 
-function c() {
-    requestAnimationFrame(c);
-    b()
+//
+
+function onDocumentMouseMove( event ) {
+
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
+
 }
 
-var myReq = requestAnimationFrame(c);
-function start() { 
-	myReq = requestAnimationFrame(c);
-}
-function stop() { 
-	window.cancelAnimationFrame(myReq);
-}
+function onDocumentTouchStart( event ) {
 
-function b() {
-    k.lookAt(e.position);
-    var r = 0;
-    for (var q = 0; q < j; q++) {
-        for (var p = 0; p < i; p++) {
-            h = o[r++];
-            h.position.y = (Math.sin((q + g) * 0.4) * 100)
-        }
+    if ( event.touches.length === 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
     }
-    l.render(e, k);
-    g += 0.1
+
+}
+
+function onDocumentTouchMove( event ) {
+
+    if ( event.touches.length === 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+    }
+
+}
+
+//
+
+function animate() {
+
+    requestAnimationFrame( animate );
+
+    render();
+
+}
+
+function render() {
+
+    camera.position.x += ( mouseX - camera.position.x ) * .05;
+    camera.position.y += ( - mouseY - camera.position.y ) * .05;
+    camera.lookAt( scene.position );
+
+    var i = 0;
+
+    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+            particle = particles[ i++ ];
+            particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+                ( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+            particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
+                ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+
+        }
+
+    }
+
+    renderer.render( scene, camera );
+
+    count += 0.1;
+
 }
 
 setTimeout(function() {
-    $('body').addClass('loaded');
-}, 0);
+
+    document.body.setAttribute('class', 'loaded');
+
+}, 1);

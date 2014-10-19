@@ -3,13 +3,13 @@ $(document).ready(function() {
 	try{Typekit.load({
 		// show content after the fonts have been loaded and rendered
 		active: function() {
-			$('.main').animate({opacity: 1}, 3000);
+			$('.main, .menu').animate({opacity: 1}, 3000);
 		}
 	});}catch(e){}
 
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-	if( mobile == false || window.innerWidth > 767 ) {
+	if( mobile == false ) {
 	   
 		// load fullpage
 	    $.getScript( "js/jquery.fullPage.min.js", function() {
@@ -24,23 +24,12 @@ $(document).ready(function() {
 		            }
 		        },
 	   			afterLoad: function(index){
-	   				var title = $('.title.active').attr('id');
-	   				var iframeID = title + '-iframe';
-	   				if ($('#' + title).hasClass('active')) {
-	   					document.getElementById(iframeID).contentWindow.start();
-	   					console.log(title);
-	   				} //else {
-	   					// $('#about-iframe, #work-iframe, #experiments-iframe').contentWindow.stop();
-	   					//document.getElementById('about-iframe').contentWindow.stop();
-	   					// document.getElementById('work-iframe').contentWindow.stop();
-	   					// document.getElementById('experiments-iframe').contentWindow.stop();
-	   				//}
-		   //          var title = $('.title.active').attr('id');
-					// if ($('#' + title).hasClass('active')) {
-					// 	$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-				 //    } else {
-				 //        $('.title iframe').attr('src', '');
-				 //    }
+		            var title = $('.title.active').attr('id');
+					if ($('#' + title).hasClass('active')) {
+						$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+				    } else {
+				        $('.title iframe').attr('src', '');
+				    }
 		        }
 	   		});
 	    });
@@ -66,11 +55,11 @@ $(document).ready(function() {
 			$.fn.fullpage.moveTo(2);
 			return false;
 		});
-		$('.js-work').click(function() {
+		$('.js-experiments').click(function() {
 			$.fn.fullpage.moveTo(4);
 			return false;
 		});
-		$('.js-experiments').click(function() {
+		$('.js-work').click(function() {
 			$.fn.fullpage.moveTo(6);
 			return false;
 		});

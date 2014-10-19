@@ -1,5 +1,5 @@
 /**
- * @author http://letters-inc.jp/
+ * Based on http://letters-inc.jp/
  */
 
 var c = document.getElementById('canvas');
@@ -25,8 +25,7 @@ draw = function(){
 	ctx.restore();      
 }
 
-function c() {
-	requestAnimationFrame(c);
+function redraw() {
 	arc = {
 		x: cw/2,
 		y: ch/2,
@@ -41,16 +40,8 @@ function c() {
 	baseArcRotation -= 0.2;
 }
 
-var myReq = requestAnimationFrame(c);
-function start() { 
-	myReq = requestAnimationFrame(c);
-}
-function stop() { 
-	cancelAnimationFrame(myReq);
-}
-
-//requestAnimationFrame(start);
+var interval = setInterval( redraw, 35 );
 
 setTimeout(function() {
-    $('body').addClass('loaded');
-}, 0);
+    document.body.className = "loaded";
+}, 50);
