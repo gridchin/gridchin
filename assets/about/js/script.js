@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
- * @author Ricardo Cabello - http://mrdoob.com/
-=======
  * Based on http://threejs.org/
->>>>>>> Canvas-optimization
  */
 
 var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
@@ -63,11 +59,7 @@ function init() {
     }
 
     renderer = new THREE.CanvasRenderer();
-<<<<<<< HEAD
-    renderer.setClearColor( 0xffffff );
-=======
     renderer.setClearColor( 0x000000 );
->>>>>>> Canvas-optimization
     renderer.setSize( window.innerWidth, window.innerHeight );
     container.appendChild( renderer.domElement );
 

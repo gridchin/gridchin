@@ -44,17 +44,8 @@ function redraw() {
 	while(times--){
 		draw();
 	}
-<<<<<<< HEAD
-	
-	var interval = setInterval( redraw, 35 );
-
-	setTimeout(function() {
-	    $('body').addClass('loaded');
-	}, 50);
-=======
 	baseArcRotation -= 0.2;
 }
->>>>>>> Canvas-optimization
 
 setTimeout(function() {
     document.body.className = "loaded";
