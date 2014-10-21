@@ -9,20 +9,27 @@ ch = c.height = window.innerHeight,
 d2r = function(degrees){
     return degrees * (Math.PI / 360);
 }
+animate();
 
-var baseArcRotation = 1;
-var arc;
-draw = function(){
+var baseArcRotation = 1,
+	arc;
+
+function draw(){
 	ctx.save();
 	ctx.translate(arc.x, arc.y);
 	ctx.rotate(-d2r(arc.angle));
 	ctx.beginPath();
 	ctx.rect(-arc.size/2, -arc.size/2, arc.size, arc.size);
-	ctx.strokeStyle = 'rgba(0,0,0, 0.2)';
+	ctx.strokeStyle = 'rgba(255,255,255,.3)';
 	ctx.stroke();
 	arc.angle += 20;
 	arc.size *= 1.2;
 	ctx.restore();      
+}
+
+function animate() {
+    requestAnimationFrame( animate );
+    redraw();
 }
 
 function redraw() {
@@ -39,8 +46,6 @@ function redraw() {
 	}
 	baseArcRotation -= 0.2;
 }
-
-var interval = setInterval( redraw, 35 );
 
 setTimeout(function() {
     document.body.className = "loaded";

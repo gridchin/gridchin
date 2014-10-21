@@ -180,9 +180,9 @@
 
 /* @group TITLE SECTIONS */
 	
-	/*.title{
+	.title{
 		background-color: #000;
-	}*/
+	}
 
 	.title iframe{
 		position: absolute;
@@ -285,7 +285,7 @@
 		width: 100%;
 		height: 2px;
 		margin-top: -1px;
-		background-color: #333;
+		background-color: #888;
 	}
 
 	.close span{
@@ -302,7 +302,7 @@
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background-color: #333;
+		background-color: #888;
 		-webkit-transition: all .3s ease-in-out; 
 		   -moz-transition: all .3s ease-in-out; 
 			 -o-transition: all .3s ease-in-out; 

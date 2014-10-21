@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<rect x="19.262" y="0.461" fill="#111111" width="1.5" height="38.604"/>
-<rect x="16.007" y="28.61" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -12.077 29.5652)" fill="#111111" width="27.286" height="1.501"/>
-<rect x="-3.267" y="28.611" transform="matrix(0.7071 0.7071 -0.7071 0.7071 23.8005 1.2632)" fill="#111111" width="27.286" height="1.501"/>
+<rect x="19.262" y="0.461" fill="#888888" width="1.5" height="38.604"/>
+<rect x="16.007" y="28.61" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 71.3756 29.156)" fill="#888888" width="27.286" height="1.501"/>
+<rect x="-3.267" y="28.611" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -3.0492 57.4601)" fill="#888888" width="27.286" height="1.501"/>
 </svg>

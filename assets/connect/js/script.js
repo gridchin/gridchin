@@ -1,9 +1,9 @@
 /**
- * @author http://letters-inc.jp/
+ * Based on http://letters-inc.jp/
  */
 
-var WW = $(window).width(),
-	WH = $(window).height(),
+var WW = window.innerWidth,
+	WH = window.innerHeight,
 	looper,
 	canvas = document.getElementById('canvas'),
 	context = canvas.getContext('2d'),
@@ -11,13 +11,7 @@ var WW = $(window).width(),
 	NUM_NODES = 100,
 	minDist = 80,
 	springAmount = 0.0002,
-	rgb = '0,0,0';
-
-function nodes_init() {
-    createNodes();
-	context.lineWidth = 1.5;
-	looper = setInterval(nodes_loop, 1000/31);
-}
+	rgb = '255,255,255';
 
 function createNodes() {
 	nodes = [];
@@ -91,9 +85,14 @@ function spring(na, nb) {
 	}
 }
 
-$(window).bind('load',function(){
-	nodes_init();
-	setTimeout(function() {
-	    $('body').addClass('loaded');
-	}, 0);
-});
+function nodes_init() {
+    createNodes();
+	context.lineWidth = 1.5;
+	looper = setInterval(nodes_loop, 1000/31);
+}
+
+nodes_init();
+
+setTimeout(function() {
+    document.body.className = "loaded";
+}, 0);

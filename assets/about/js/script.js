@@ -1,5 +1,5 @@
 /**
- * @author Ricardo Cabello - http://mrdoob.com/
+ * Based on http://threejs.org/
  */
 
 var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;

@@ -1,5 +1,5 @@
 /**
- * @author Ricardo Cabello - http://mrdoob.com/
+ * Based on http://threejs.org/
  */
 
 var mouseX = 0, mouseY = 0,
@@ -30,6 +30,7 @@ function init() {
     scene = new THREE.Scene();
 
     renderer = new THREE.CanvasRenderer();
+    renderer.setClearColor(0x000000);
     renderer.setSize( window.innerWidth, window.innerHeight );
     container.appendChild( renderer.domElement );
 
@@ -38,7 +39,7 @@ function init() {
     var PI2 = Math.PI * 2;
     var material = new THREE.SpriteCanvasMaterial( {
 
-        color: 0x000000,
+        color: 0xffffff,
         program: function ( context ) {
 
             context.beginPath();
@@ -68,7 +69,7 @@ function init() {
 
     // lines
 
-    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.1 } ) );
+    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.15 } ) );
     scene.add( line );
 
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
