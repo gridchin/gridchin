@@ -179,6 +179,10 @@
 
 
 /* @group TITLE SECTIONS */
+	
+	.title{
+		background-color: #000;
+	}
 
 	.title iframe{
 		position: absolute;
@@ -198,6 +202,7 @@
 		left: 50%;
 		margin: -23px 0 0 -200px;
 		width: 400px;
+		color: #fff;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -280,7 +285,7 @@
 		width: 100%;
 		height: 2px;
 		margin-top: -1px;
-		background-color: #333;
+		background-color: #888;
 	}
 
 	.close span{
@@ -297,7 +302,7 @@
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background-color: #333;
+		background-color: #888;
 		-webkit-transition: all .3s ease-in-out; 
 		   -moz-transition: all .3s ease-in-out; 
 			 -o-transition: all .3s ease-in-out; 

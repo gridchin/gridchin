@@ -3,7 +3,11 @@ $(document).ready(function() {
 	try{Typekit.load({
 		// show content after the fonts have been loaded and rendered
 		active: function() {
+<<<<<<< HEAD
 			$('.main, .menu').animate({opacity: 1}, 3000);
+=======
+			$('.main, .menu').animate({opacity: 1}, 2000);
+>>>>>>> Canvas-optimization
 		}
 	});}catch(e){}
 
@@ -36,7 +40,7 @@ $(document).ready(function() {
 		$.getScript( "js/three.min.js");
 		
 		// keep scrolling
-		$('.title h1').click(function(){
+		$('.title h1').click(function() {
 			$.fn.fullpage.moveSectionDown();
 			return false;
 		})
