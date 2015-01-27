@@ -235,15 +235,15 @@
 	}
 	
 	.logo h1{
-		margin-top: -20px; 
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.logo p{
+		margin-top: -20px;
 		font-size: 2em;
 		line-height: 1.6;
 		text-transform: uppercase;
+	}
+
+	.logo p{
+		font-size: 14px;
+		font-weight: 400;
 	}
 
 	.logo canvas{
@@ -392,100 +392,6 @@
 
 	.modal ul a:hover{
 		opacity: 1;
-	}
-
-/* @end */
-
-
-/* @group WORK */
-
-	.projects{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	.project{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: transparent no-repeat center;
-		opacity: 0;
-		display: block;
-		text-indent: -100%;
-		-webkit-transition: all .2s;
-		   -moz-transition: all .2s;
-			 -o-transition: all .2s;
-				transition: all .2s;
-	}
-
-	.project.contain{
-		background-size: contain;
-	}
-
-	.project.cover{
-		background-size: cover;
-	}
-
-	.project.visible{
-		opacity: .2;
-	}
-
-	.project.samsung-s5{
-		background-image: url('../assets/projects/samsung-s5.png');
-		background-position: center top;
-	}
-
-	.project.samsung-tab-s{
-		background-image: url('../assets/projects/samsung-tab-s.jpg');
-	}
-
-	.project.statoil{
-		background-image: url('../assets/projects/statoil.jpg');
-	}
-
-	.project.linkedin{
-		background-image: url('../assets/projects/linkedin.jpg');
-	}
-
-	.project.f2f{
-		background-image: url('../assets/projects/f2f.jpg');
-	}
-
-	.project.mariscal{
-		background-image: url('../assets/projects/mariscal.jpg');
-	}
-
-	.project.hilton{
-		background-image: url('../assets/projects/hilton.jpg');
-	}
-
-	.project.lalalatoys{
-		background-image: url('../assets/projects/lalalatoys.jpg');
-	}
-
-	.project.soyhugo{
-		background-image: url('../assets/projects/soyhugo.png');
-	}
-
-	.project.intelectuales{
-		background-image: url('../assets/projects/intelectuales.jpg');
-	}
-
-	.project.gridchin{
-		background-image: url('../assets/projects/gridchin.jpg');
-	}
-
-	.project.spongebobfanclub{
-		background-image: url('../assets/projects/spongebobfanclub.png');
-	}
-
-	.project.statoil{
-		background-image: url('../assets/projects/statoil.jpg');
 	}
 
 /* @end */

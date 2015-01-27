@@ -69,7 +69,7 @@ function init() {
 
     // lines
 
-    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.15 } ) );
+    var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.2 } ) );
     scene.add( line );
 
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );

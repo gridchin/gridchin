@@ -80,15 +80,6 @@ $(document).ready(function() {
 			return false;
 		});
 
-		// projects
-		$('.work a').mouseover(function() {
-			var project = $(this).attr('class');
-			$('li.visible').removeClass('visible');
-			$('li.' + project).addClass('visible');
-		}).mouseout(function() {
-			$('li.visible').removeClass('visible');
-		});
-
 		// iframe fix on FF
 		var isFirefox = typeof InstallTrigger !== 'undefined'; 
 		if (isFirefox == true) {
