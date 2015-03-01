@@ -22,14 +22,6 @@ $(document).ready(function() {
 		            if(index == '1'){
 		                $('.next').fadeOut('fast');
 		            }
-		        },
-	   			afterLoad: function(index){
-		            var title = $('.title.active').attr('id');
-					if ($('#' + title).hasClass('active')) {
-						$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-				    } else {
-				        $('.title iframe').attr('src', '');
-				    }
 		        }
 	   		});
 	    });
@@ -80,12 +72,6 @@ $(document).ready(function() {
 			return false;
 		});
 
-		// iframe fix on FF
-		var isFirefox = typeof InstallTrigger !== 'undefined'; 
-		if (isFirefox == true) {
-			$('.title iframe').css('pointer-events', 'none');
-		};
-
 	}
    	
 	// analytics
@@ -94,13 +80,13 @@ $(document).ready(function() {
 	});
 
 	// hotjar
-	(function(f,b){
-        var c;
-        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
-        f._hjSettings={hjid:17566, hjsv:3};
-        c=b.createElement("script");c.async=1;
-        c.src="//static.hotjar.com/c/hotjar-17566.js?sv=3";
-        b.getElementsByTagName("head")[0].appendChild(c); 
-    })(window,document);
+	// (function(f,b){
+ //        var c;
+ //        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+ //        f._hjSettings={hjid:17566, hjsv:3};
+ //        c=b.createElement("script");c.async=1;
+ //        c.src="//static.hotjar.com/c/hotjar-17566.js?sv=3";
+ //        b.getElementsByTagName("head")[0].appendChild(c); 
+ //    })(window,document);
 	
 });

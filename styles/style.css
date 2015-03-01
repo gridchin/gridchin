@@ -373,8 +373,8 @@
 
 	.modal ul li{
 		display: block;
-		height: 25%;
-		height: calc(100% / 4);
+		height: 33%;
+		height: calc(100% / 3);
 		min-height: 3em;
 	}
 
