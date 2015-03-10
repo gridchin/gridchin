@@ -372,16 +372,18 @@
 	}
 
 	.modal ul li{
-		display: block;
+		display: table;
 		height: 33%;
 		height: calc(100% / 3);
 		min-height: 3em;
+		width: 100%
 	}
 
 	.modal ul a{
 		font-size: 3em;
 		font-weight: 300;
-		display: block;
+		display: table-cell;
+		vertical-align: middle;
 		color: #fff;
 		text-transform: uppercase;
 	}

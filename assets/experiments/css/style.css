@@ -5,12 +5,4 @@ body {
 	height: 100%;
 	overflow: hidden;
 	background-color: transparent;
-	opacity: 0;
-    -webkit-transition: all 2s;
-       -moz-transition: all 2s;
-    		transition: all 2s;
-}
-
-.loaded {
-    opacity: 1;
 }

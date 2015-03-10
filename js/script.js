@@ -1,30 +1,30 @@
 $(document).ready(function() {
 	
+	// show content after the fonts have been loaded and rendered
 	try{Typekit.load({
-		// show content after the fonts have been loaded and rendered
 		active: function() {
-			$('.main, .menu').animate({opacity: 1}, 2000);
+			$('.main, .menu').animate({opacity: 1}, 3000);
 		}
 	});}catch(e){}
+
+	// load fullpage
+	$('.main').fullpage({
+		css3: true,
+		verticalCentered: false,
+		resize: false,
+		responsive: 767,
+		continuousVertical: true,
+		onLeave: function(index){
+            if(index == '1'){
+                $('.next').fadeOut('fast');
+            }
+        }
+	});
 
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 	if( mobile == false ) {
-	   
-		// load fullpage
-	    $.getScript( "js/jquery.fullPage.min.js", function() {
-	    	$('.main').fullpage({
-	   			css3: true,
-	   			verticalCentered: false,
-	   			resize: false,
-	   			continuousVertical: true,
-	   			onLeave: function(index){
-		            if(index == '1'){
-		                $('.next').fadeOut('fast');
-		            }
-		        }
-	   		});
-	    });
+
 		$.getScript( "js/three.min.js");
 		
 		// keep scrolling
@@ -80,13 +80,13 @@ $(document).ready(function() {
 	});
 
 	// hotjar
-	// (function(f,b){
- //        var c;
- //        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
- //        f._hjSettings={hjid:17566, hjsv:3};
- //        c=b.createElement("script");c.async=1;
- //        c.src="//static.hotjar.com/c/hotjar-17566.js?sv=3";
- //        b.getElementsByTagName("head")[0].appendChild(c); 
- //    })(window,document);
+	(function(f,b){
+        var c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:17566, hjsv:3};
+        c=b.createElement("script");c.async=1;
+        c.src="//static.hotjar.com/c/hotjar-17566.js?sv=3";
+        b.getElementsByTagName("head")[0].appendChild(c); 
+    })(window,document);
 	
 });

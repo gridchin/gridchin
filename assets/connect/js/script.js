@@ -92,7 +92,3 @@ function nodes_init() {
 }
 
 nodes_init();
-
-setTimeout(function() {
-    document.body.className = "loaded";
-}, 0);
