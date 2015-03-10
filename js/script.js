@@ -3,28 +3,39 @@ $(document).ready(function() {
 	// show content after the fonts have been loaded and rendered
 	try{Typekit.load({
 		active: function() {
-			$('.main, .menu').animate({opacity: 1}, 3000);
+			$('.main, .menu').animate({opacity: 1}, 2000);
 		}
 	});}catch(e){}
-
-	// load fullpage
-	$('.main').fullpage({
-		css3: true,
-		verticalCentered: false,
-		resize: false,
-		responsive: 767,
-		continuousVertical: true,
-		onLeave: function(index){
-            if(index == '1'){
-                $('.next').fadeOut('fast');
-            }
-        }
-	});
 
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 	if( mobile == false ) {
 
+		// load fullpage
+	    $.getScript( "js/jquery.fullPage.min.js", function() {
+	    	$('.main').fullpage({
+	   			css3: true,
+	   			verticalCentered: false,
+	   			resize: false,
+				responsive: 767,
+	   			continuousVertical: true,
+	   			onLeave: function(index){
+		            if(index == '1'){
+		                $('.next').fadeOut('fast');
+		            }
+		        },
+	   			afterLoad: function(index){
+		            var title = $('.title.active').attr('id');
+					if ($('#' + title).hasClass('active')) {
+						$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
+				    } else {
+				        $('.title iframe').attr('src', '');
+				    }
+		        }
+	   		});
+	    });
+
+	    // load threejs
 		$.getScript( "js/three.min.js");
 		
 		// keep scrolling
@@ -51,12 +62,8 @@ $(document).ready(function() {
 			$.fn.fullpage.moveTo(4);
 			return false;
 		});
-		$('.js-work').click(function() {
-			$.fn.fullpage.moveTo(6);
-			return false;
-		});
 		$('.js-connect').click(function() {
-			$.fn.fullpage.moveTo(8);
+			$.fn.fullpage.moveTo(6);
 			return false;
 		});
 		$('#modal a').click(function() {
