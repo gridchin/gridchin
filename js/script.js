@@ -45,6 +45,10 @@ $(document).ready(function() {
 		})
 
 		// menu
+		var closeModal = function() {
+			$('#modal').fadeOut();
+			$('#menu').removeClass('close').addClass('menu');
+		};
 		$('body').on('click', '.menu', function() {
 			$('#menu').toggleClass('menu close');
 			$('#modal').fadeIn();
@@ -56,19 +60,24 @@ $(document).ready(function() {
 		});
 		$('.js-about').click(function() {
 			$.fn.fullpage.moveTo(2);
+			closeModal();
 			return false;
 		});
 		$('.js-experiments').click(function() {
 			$.fn.fullpage.moveTo(4);
+			closeModal();
 			return false;
 		});
 		$('.js-connect').click(function() {
 			$.fn.fullpage.moveTo(6);
+			closeModal();
 			return false;
 		});
-		$('#modal a').click(function() {
-			$('#modal').fadeOut();
-			$('#menu').removeClass('close').addClass('menu');
+		$('.js-bg').click(function() {
+			var bg = function () {
+				alert('hi');
+			};
+			$('#modal iframe').bg();
 			return false;
 		});
 		

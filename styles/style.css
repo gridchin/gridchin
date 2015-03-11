@@ -343,13 +343,25 @@
 	.modal{
 		width: 100%;
 		height: 100%;
-		background: rgba(85,200,115,.9) url("../assets/bg.svg") no-repeat center;
-		background-size: cover;
+		/*background: rgba(85,200,115,.9) url("../assets/bg.svg") no-repeat center;
+		background-size: cover;*/
 		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 2;
 		text-align: center;
+	}
+
+	.modal iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		z-index: 0;
+		border: none;
+		overflow: hidden;
 	}
 
 	.modal nav{
@@ -373,8 +385,8 @@
 
 	.modal ul li{
 		display: table;
-		height: 33%;
-		height: calc(100% / 3);
+		height: 25%;
+		height: calc(100% / 4);
 		min-height: 3em;
 		width: 100%
 	}
@@ -394,6 +406,11 @@
 
 	.modal ul a:hover{
 		opacity: 1;
+	}
+
+	.modal .change {
+		text-transform: none;
+		font-size: 2em;
 	}
 
 /* @end */
