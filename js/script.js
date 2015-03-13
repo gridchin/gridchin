@@ -73,11 +73,13 @@ $(document).ready(function() {
 			closeModal();
 			return false;
 		});
-		$('.js-bg').click(function() {
-			var bg = function () {
-				alert('hi');
+		var bg = function () {
+				recolor();
+            	redraw();
+				return false;
 			};
-			$('#modal iframe').bg();
+		$('.js-bg').click(function() {
+			$('#bg')[0].contentWindow.bg();
 			return false;
 		});
 		
