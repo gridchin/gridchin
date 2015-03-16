@@ -73,11 +73,6 @@ $(document).ready(function() {
 			closeModal();
 			return false;
 		});
-		var bg = function () {
-				recolor();
-            	redraw();
-				return false;
-			};
 		$('.js-bg').click(function() {
 			$('#bg')[0].contentWindow.bg();
 			return false;
