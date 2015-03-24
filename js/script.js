@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
+	// show content after the fonts have been loaded and rendered
 	try{Typekit.load({
-		// show content after the fonts have been loaded and rendered
 		active: function() {
 			$('.main, .menu').animate({opacity: 1}, 2000);
 		}
@@ -10,13 +10,14 @@ $(document).ready(function() {
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 	if( mobile == false ) {
-	   
+
 		// load fullpage
 	    $.getScript( "js/jquery.fullPage.min.js", function() {
 	    	$('.main').fullpage({
 	   			css3: true,
 	   			verticalCentered: false,
 	   			resize: false,
+				responsive: 767,
 	   			continuousVertical: true,
 	   			onLeave: function(index){
 		            if(index == '1'){
@@ -33,6 +34,8 @@ $(document).ready(function() {
 		        }
 	   		});
 	    });
+
+	    // load threejs
 		$.getScript( "js/three.min.js");
 		
 		// keep scrolling
@@ -42,6 +45,10 @@ $(document).ready(function() {
 		})
 
 		// menu
+		var closeModal = function() {
+			$('#modal').fadeOut();
+			$('#menu').removeClass('close').addClass('menu');
+		};
 		$('body').on('click', '.menu', function() {
 			$('#menu').toggleClass('menu close');
 			$('#modal').fadeIn();
@@ -53,23 +60,21 @@ $(document).ready(function() {
 		});
 		$('.js-about').click(function() {
 			$.fn.fullpage.moveTo(2);
+			closeModal();
 			return false;
 		});
 		$('.js-experiments').click(function() {
 			$.fn.fullpage.moveTo(4);
-			return false;
-		});
-		$('.js-work').click(function() {
-			$.fn.fullpage.moveTo(6);
+			closeModal();
 			return false;
 		});
 		$('.js-connect').click(function() {
-			$.fn.fullpage.moveTo(8);
+			$.fn.fullpage.moveTo(6);
+			closeModal();
 			return false;
 		});
-		$('#modal a').click(function() {
-			$('#modal').fadeOut();
-			$('#menu').removeClass('close').addClass('menu');
+		$('.js-bg').click(function() {
+			$('#bg')[0].contentWindow.bg();
 			return false;
 		});
 		
@@ -79,12 +84,6 @@ $(document).ready(function() {
 			$.fn.fullpage.moveSectionDown();
 			return false;
 		});
-
-		// iframe fix on FF
-		var isFirefox = typeof InstallTrigger !== 'undefined'; 
-		if (isFirefox == true) {
-			$('.title iframe').css('pointer-events', 'none');
-		};
 
 	}
    	

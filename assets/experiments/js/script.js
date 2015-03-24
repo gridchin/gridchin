@@ -148,9 +148,3 @@ function render() {
     renderer.render( scene, camera );
 
 }
-
-setTimeout(function() {
-
-    document.body.className = "loaded";
-
-}, 0);

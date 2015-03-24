@@ -157,9 +157,3 @@ function render() {
     count += 0.1;
 
 }
-
-setTimeout(function() {
-
-    document.body.setAttribute('class', 'loaded');
-
-}, 1);
