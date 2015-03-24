@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 	}
    	
-	analytics
+	// analytics
 	$('#logo').on('click', function() {
 		ga('send', 'event', '#logo', 'click');
 	});
