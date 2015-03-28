@@ -425,9 +425,27 @@
 		opacity: 1;
 	}
 
-	.modal .change {
-		text-transform: none;
-		font-size: 2em;
+	.modal .refresh {
+		background: transparent url('../assets/refresh.svg') no-repeat center;
+		overflow: hidden;
+		text-indent: -9999em;
+	}
+
+	.modal .refresh:hover {
+		-webkit-animation: refresh 1s;
+				animation: refresh 1s;
+	}
+
+	@-webkit-keyframes refresh {
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+
+	@keyframes refresh {
+		to {
+			transform: rotate(360deg);
+		}
 	}
 
 /* @end */
