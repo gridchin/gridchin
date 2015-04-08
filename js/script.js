@@ -50,6 +50,7 @@ $(document).ready(function() {
 			$('#menu').removeClass('close').addClass('menu');
 		};
 		$('body').on('click', '.menu', function() {
+			$('#bg')[0].contentWindow.bg();
 			$('#menu').toggleClass('menu close');
 			$('#modal').fadeIn();
 			return false;
