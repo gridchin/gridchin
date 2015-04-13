@@ -46,17 +46,17 @@ $(document).ready(function() {
 
 		// menu
 		var closeModal = function() {
-			$('#modal').fadeOut();
+			$('#modal').addClass('soft-hide');
 			$('#menu').removeClass('close').addClass('menu');
 		};
 		$('body').on('click', '.menu', function() {
-			$('#bg')[0].contentWindow.bg();
+			//$('#bg')[0].contentWindow.bg();
 			$('#menu').toggleClass('menu close');
-			$('#modal').fadeIn();
+			$('#modal').removeClass('soft-hide');
 			return false;
 		}).on('click', '.close', function() {
 			$('#menu').toggleClass('menu close');
-			$('#modal').fadeOut();
+			$('#modal').addClass('soft-hide');
 			return false;
 		});
 		$('.js-about').click(function() {
@@ -75,7 +75,7 @@ $(document).ready(function() {
 			return false;
 		});
 		$('.js-bg').click(function() {
-			$('#bg')[0].contentWindow.bg();
+			//$('#bg')[0].contentWindow.pattern.canvas();
 			return false;
 		});
 		

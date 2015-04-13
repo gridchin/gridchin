@@ -78,7 +78,8 @@
 	}
 
 	.soft-hide{
-		display: none;
+		z-index: -1;
+		opacity: 0;
 	}
 	
 	.inherit{
@@ -352,7 +353,6 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 2;
 		text-align: center;
 	}
 
@@ -401,8 +401,8 @@
 
 	.modal ul li{
 		display: table;
-		height: 25%;
-		height: calc(100% / 4);
+		height: 33.3%;
+		height: calc(100% / 3);
 		min-height: 3em;
 		width: 100%
 	}
@@ -425,9 +425,15 @@
 	}
 
 	.modal .refresh {
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
 		background: transparent url('../assets/refresh.svg') no-repeat center;
 		overflow: hidden;
 		text-indent: -9999em;
+		z-index: 1;
 	}
 
 	.modal .refresh:hover {
