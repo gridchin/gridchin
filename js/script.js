@@ -1,12 +1,19 @@
+// show content after the fonts have been loaded and rendered
+try {
+	Typekit.load({
+		active: function() {
+			$('.main').removeClass('hidden');
+			$('.layer').addClass('opacity');
+			setTimeout(function() {
+				$('.layer').hide();
+				$('.js-opacity').removeClass('opacity');
+			}, 3000);
+		}
+	});
+} catch(e) {}
+
 $(document).ready(function() {
 	
-	// show content after the fonts have been loaded and rendered
-	try{Typekit.load({
-		active: function() {
-			$('.main, .menu').animate({opacity: 1}, 2000);
-		}
-	});}catch(e){}
-
 	var mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 	if( mobile == false ) {
@@ -45,18 +52,26 @@ $(document).ready(function() {
 		})
 
 		// menu
+		// special thanks to @qrohlf for his help on Trianglify integration
 		var closeModal = function() {
-			$('#modal').addClass('soft-hide');
+			$('#modal').fadeOut();
 			$('#menu').removeClass('close').addClass('menu');
 		};
+		var bgCanvas = document.getElementById('bg');
 		$('body').on('click', '.menu', function() {
-			//$('#bg')[0].contentWindow.bg();
+			var pattern = Trianglify({
+			    height: window.innerHeight,
+			    width: window.innerWidth,
+			    variance: '1',
+			    x_colors: 'random',
+			    cell_size: 33});
+			pattern.canvas(bgCanvas);
 			$('#menu').toggleClass('menu close');
-			$('#modal').removeClass('soft-hide');
+			$('#modal').fadeIn();
 			return false;
 		}).on('click', '.close', function() {
 			$('#menu').toggleClass('menu close');
-			$('#modal').addClass('soft-hide');
+			$('#modal').fadeOut();
 			return false;
 		});
 		$('.js-about').click(function() {
@@ -75,7 +90,13 @@ $(document).ready(function() {
 			return false;
 		});
 		$('.js-bg').click(function() {
-			//$('#bg')[0].contentWindow.pattern.canvas();
+			var pattern = Trianglify({
+			    height: window.innerHeight,
+			    width: window.innerWidth,
+			    variance: '1',
+			    x_colors: 'random',
+			    cell_size: 33});
+			pattern.canvas(bgCanvas);
 			return false;
 		});
 		

@@ -29,16 +29,13 @@
 	<meta name="twitter:image:src" content="http://www.gridchin.com/assets/og.png">
 
     <!-- Google stuff -->
-    <meta name="google-site-verification" content="aKvxZjsxzEuUO8cobK1mBEO9uEEEw5wTKikz38riVoA" />
+    <meta name="google-site-verification" content="aKvxZjsxzEuUO8cobK1mBEO9uEEEw5wTKikz38riVoA">
 	
 	<!-- Styles -->
 	<link href="styles/bootstrap.min.css" rel="stylesheet">
 	<link href="styles/bootstrap-theme.min.css" rel="stylesheet">
     <link href="styles/jquery.fullPage.css" rel="stylesheet">
 	<link href="styles/style.css" rel="stylesheet">
-
-	<!-- Fonts -->
-	<script type="text/javascript" src="//use.typekit.net/wzm5jkn.js"></script>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
@@ -49,30 +46,33 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png">
+	
+	<!-- Fonts -->
+	<script src="https://use.typekit.net/wzm5jkn.js"></script>
 
 	<!-- Scripts -->
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/logo/logo.js"></script>
 	<script src="js/logo/logo.util.min.js"></script>
 	<script src="js/logo/logo.input.move.js"></script>
 	<script src="js/logo/logo.input.press.js"></script>
+	<script src="js/trianglify.min.js"></script>
 	<script src="js/script.js"></script>
 	
 </head>
 <body>
 
-	<div class="main opacity">
+	<div class="main hidden">
 
 	    <section class="table">
 	    	<header id="logo" class="logo cell">
 				<canvas id="logo-canvas"></canvas> 
 				<canvas id="shadow-canvas"></canvas> 
 				<script type="text/javascript" src="js/logo/logo.initialize.js"></script>
-		    	<h1>Design <span>+</span> Code</h1>
-		    	<p>Denis Fernandez Gridchin</p>
+		    	<h1 class="opacity tr js-opacity">Design <span>+</span> Code</h1>
+		    	<p class="opacity tr js-opacity">Denis Fernandez Gridchin</p>
 		    </header>
-	    	<a class="next hidden-xs" href="">Scroll down please</a>
+	    	<a class="next opacity hidden-xs js-opacity" href="">Scroll down please</a>
 	    </section>
 
 	    <section class="title hidden-xs" id="about">
@@ -89,7 +89,7 @@
 			    			<h2>Hi! I'm Denis</h2>
 			            	<p>I'm a minimalist frontend designer &amp; developer. I enjoy the creation of meaningful experiences that digital technologies can reveal.</p>
 			            	<p>I live in Barcelona and <span class="line-through">work</span> have fun at <a href="http://www.friend2friend.com/" target="_blank">Friend2Friend</a>, where I had the pleasure to collaborate in projects for great clients such as <a href="http://www.superpoweredyou5.com/" target="_blank">Samsung</a>, <a href="http://www.spongebobfanclub.com/" target="_blank">Nickelodeon</a>, <a href="http://www.friend2friend.com/client/universal/" target="_blank">Universal</a>, <a href="http://www.friend2friend.com/client/microsoft/" target="_blank">Microsoft</a>, <a href="http://www.friend2friend.com/client/intel/" target="_blank">Intel</a>, <a href="http://www.friend2friend.com/client/ikea/" target="_blank">IKEA</a>, <a href="http://www.friend2friend.com/client/calvin-klein/" target="_blank">Calvin Klein</a>, <a href="http://www.ie.edu/find-your-ie-master/" target="_blank">IE Business School</a>, <a href="http://mba.sbs-social.com/" target="_blank">University of Oxford</a>. In my free time I create <a class="js-experiments" href="">experiments</a>. You can <a href="http://gridchin.com/cv_denis.pdf" target="_blank">download my CV</a> if you wish.</p>
-			            	<p>I'm Cuban and <a href="https://www.youtube.com/watch?v=taujUU2cXEE" target="_blank">love playing</a> my bass guitar.</p>
+			            	<p>I'm Cuban and love <a href="https://www.youtube.com/watch?v=taujUU2cXEE" target="_blank">playing my bass guitar</a>.</p>
 			    		</article>
 			    		<article class="col-sm-4 hidden-xs">
 			    			<h2>Mentions</h2>
@@ -107,7 +107,10 @@
 			                        <a href="http://cssreel.com/Website/denis-fernandez-gridchin" target="_blank">CSS Website Awards</a>
 			                    </li>
 			                    <li>
-			                    	<a href="http://designwoop.com/2012/01/30-inspiring-examples-of-big-typography-in-web-design/" target="_blank">30 Inspiring Examples of Big Typography in Web Design</a>
+			                    	<a href="http://www.designlicks.com/website/denis-fernandez-gridchin-21235" target="_blank">Design Licks</a>
+			                    </li>
+			                    <li>
+			                    	<a href="http://designwoop.com/2012/01/30-inspiring-examples-of-big-typography-in-web-design/" target="_blank">30 Inspiring Examples in Web Design</a>
 			                    </li>
 			                    <li>
 			                    	<a href="http://www.webdesignerdepot.com/2011/09/the-ultimate-responsive-web-design-roundup/" target="_blank">Responsive Web Design Roundup</a>
@@ -252,8 +255,11 @@
 			                    <li>
 			                    	<a href="http://www.facebook.com/gridchin" target="_blank">facebook</a>
 			                    </li>
-			                    <li class="hidden">
-			                    	<a href="https://plus.google.com/116882143004106042646" rel="publisher">Google+</a>
+			                    <li>
+			                    	<a href="https://google.com/+Gridchin" rel="publisher" target="_blank">google+</a>
+			                    </li>
+			                    <li>
+			                    	<a href="http://codepen.io/gridchin" target="_blank">codepen</a>
 			                    </li>
 				    		</ul>
 				    	</article>
@@ -275,6 +281,12 @@
 			                    <li>
 			                    	<a href="https://twitter.com/dicepb/" target="_blank">Jorge Batista</a>
 			                    </li>
+			                    <li>
+			                    	<a href="http://lxdbs.es/" target="_blank">Alex Martinez</a>
+			                    </li>
+			                    <li>
+			                    	<a href="http://www.georeworks.com/" target="_blank">Jorge López</a>
+			                    </li>
 				    		</ul>
 			    		</article>
 			    	</div><!-- /row -->
@@ -284,12 +296,14 @@
 	    
 	</div><!-- /main -->
 
-	<a class="menu opacity hidden-xs" id="menu" href="">
+	<figure class="layer tr"></figure>
+
+	<a class="menu opacity hidden-xs js-opacity" id="menu" href="">
 		<span>Toogle menu</span>
 	</a>
 
-	<div class="modal soft-hide tr" id="modal">
-		<iframe src="assets/bg" id="bg"></iframe>
+	<div class="modal" id="modal">
+		<canvas id="bg"></canvas>
 		<a class="refresh js-bg" href="">refresh background</a>
 		<nav>
 			<ul>
