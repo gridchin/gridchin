@@ -391,6 +391,7 @@
 	.modal ul a{
 		font-size: 40px;
 		font-weight: 300;
+		letter-spacing: 1px;
 		display: table-cell;
 		vertical-align: middle;
 		color: #fff;
