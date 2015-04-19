@@ -1,15 +1,6 @@
-// show content after the fonts have been loaded and rendered
+// load typekit
 try {
-	Typekit.load({
-		active: function() {
-			$('.main').removeClass('hidden');
-			$('.layer').addClass('opacity');
-			setTimeout(function() {
-				$('.layer').hide();
-				$('.js-opacity').removeClass('opacity');
-			}, 3000);
-		}
-	});
+	Typekit.load();
 } catch(e) {}
 
 $(document).ready(function() {
@@ -21,23 +12,20 @@ $(document).ready(function() {
 		// load fullpage
 	    $.getScript( "js/jquery.fullPage.min.js", function() {
 	    	$('.main').fullpage({
-	   			css3: true,
 	   			verticalCentered: false,
-	   			resize: false,
 				responsive: 767,
 	   			continuousVertical: true,
-	   			onLeave: function(index){
+	   			afterRender: function() {
+	   				$('.main, .layer').toggleClass('opacity');
+					setTimeout(function() {
+						$('.layer').hide();
+						$('.js-opacity').removeClass('opacity');
+					}, 3000);
+	   			},
+	   			onLeave: function(index) {
 		            if(index == '1'){
 		                $('.next').fadeOut('fast');
 		            }
-		        },
-	   			afterLoad: function(index){
-		            var title = $('.title.active').attr('id');
-					if ($('#' + title).hasClass('active')) {
-						$('#' + title + ' iframe').attr('src', 'assets/' + title + '/');
-				    } else {
-				        $('.title iframe').attr('src', '');
-				    }
 		        }
 	   		});
 	    });
@@ -46,7 +34,7 @@ $(document).ready(function() {
 		$.getScript( "js/three.min.js");
 		
 		// keep scrolling
-		$('.title h1').click(function() {
+		$('body').on('click', '.title h1', function() {
 			$.fn.fullpage.moveSectionDown();
 			return false;
 		})
@@ -70,38 +58,47 @@ $(document).ready(function() {
 			$('#modal').fadeIn();
 			return false;
 		}).on('click', '.close', function() {
-			$('#menu').toggleClass('menu close');
-			$('#modal').fadeOut();
+			closeModal();
 			return false;
-		});
-		$('.js-about').click(function() {
+		}).on('click', '.js-about', function() {
+			$.fn.fullpage.setScrollingSpeed(0);
 			$.fn.fullpage.moveTo(2);
 			closeModal();
+			$.fn.fullpage.setScrollingSpeed(700);
 			return false;
-		});
-		$('.js-experiments').click(function() {
+		}).on('click', '.js-experiments', function() {
+			$.fn.fullpage.setScrollingSpeed(0);
 			$.fn.fullpage.moveTo(4);
 			closeModal();
+			$.fn.fullpage.setScrollingSpeed(700);
 			return false;
-		});
-		$('.js-connect').click(function() {
+		}).on('click', '.js-connect', function() {
+			$.fn.fullpage.setScrollingSpeed(0);
 			$.fn.fullpage.moveTo(6);
 			closeModal();
+			$.fn.fullpage.setScrollingSpeed(700);
 			return false;
 		});
-		$('.js-bg').click(function() {
-			var pattern = Trianglify({
-			    height: window.innerHeight,
-			    width: window.innerWidth,
-			    variance: '1',
-			    x_colors: 'random',
-			    cell_size: 33});
-			pattern.canvas(bgCanvas);
-			return false;
+		$('.js-bg').on({
+			mouseenter: function(){
+				$(this).addClass("animated");
+			}, click: function() {
+				$(this).addClass("animated");
+				var pattern = Trianglify({
+				    height: window.innerHeight,
+				    width: window.innerWidth,
+				    variance: '1',
+				    x_colors: 'random',
+				    cell_size: 33});
+				pattern.canvas(bgCanvas);
+				return false;
+			} 
+		}).bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+			$(this).removeClass("animated");
 		});
 		
 		// arrow
-		$('.next').click(function() {
+		$('body').on('click', '.next', function() {
 			$(this).fadeOut('fast');
 			$.fn.fullpage.moveSectionDown();
 			return false;
@@ -110,7 +107,7 @@ $(document).ready(function() {
 	}
    	
 	// analytics
-	$('#logo').on('click', function() {
+	$('body').on('click', '#logo', function() {
 		ga('send', 'event', '#logo', 'click');
 	});
 

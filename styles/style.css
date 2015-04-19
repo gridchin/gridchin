@@ -79,10 +79,6 @@
 			 -o-transition: all 3s;
 				transition: all 3s;
 	}
-
-	.soft-hide{
-		display: none;
-	}
 	
 	.inherit{
 		position: inherit;
@@ -203,10 +199,10 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		margin: -23px 0 0 -200px;
-		width: 400px;
+		margin: -22px 0 0 -160px;
+		width: 320px;
 		color: #fff;
-		font-size: 43px;
+		font-size: 40px;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -393,7 +389,7 @@
 	}
 
 	.modal ul a{
-		font-size: 43px;
+		font-size: 40px;
 		font-weight: 300;
 		display: table-cell;
 		vertical-align: middle;
@@ -421,7 +417,7 @@
 		z-index: 1;
 	}
 
-	.modal .refresh:hover {
+	.refresh.animated {
 		-webkit-animation: refresh 1s;
 				animation: refresh 1s;
 	}
@@ -445,7 +441,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: #fff;
-		z-index: 4;
+		z-index: 5;
 	}
 
 /* @end */
