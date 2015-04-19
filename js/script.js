@@ -45,6 +45,11 @@ $(document).ready(function() {
 			$('#modal').fadeOut();
 			$('#menu').removeClass('close').addClass('menu');
 		};
+		$(document).keydown(function() {
+			if (event.keyCode == 27){  //escape key
+				closeModal();
+			}
+		});
 		var bgCanvas = document.getElementById('bg');
 		$('body').on('click', '.menu', function() {
 			var pattern = Trianglify({
