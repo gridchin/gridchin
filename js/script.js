@@ -102,9 +102,12 @@ $(document).ready(function() {
 			$(this).removeClass("animated");
 		});
 		
-		// arrow
+		// move down
 		$('body').on('click', '.next', function() {
 			$(this).fadeOut('fast');
+			$.fn.fullpage.moveSectionDown();
+			return false;
+		}).on('click', '.js-down', function() {
 			$.fn.fullpage.moveSectionDown();
 			return false;
 		});

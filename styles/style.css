@@ -232,6 +232,7 @@
 	
 	.logo h1{
 		margin-top: -20px;
+		cursor: pointer;
 	}
 
 	.logo span{
